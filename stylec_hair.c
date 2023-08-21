@@ -1,21 +1,34 @@
 #include <stdio.h>
 
+//------------------
 void menuPrincipal();
+void info();
+//------------------
+
+void info()
+{
+	printf("/////////////////////////////////////////////////////////////\n");
+	printf("/       Universidade Federal do Rio Grande do Norte         /\n");
+	printf("/           Centro de Ensino Superior do Serido             /\n");
+	printf("/         Departamento de Computacao e Tecnologia           /\n");
+	printf("/            Disciplina DCT1106 -- Programacao              /\n");
+}
+
 int main()
 {
+	info();
 	menuPrincipal();
 	return 0;
 }
 
 void menuPrincipal()
 {
-	printf("\n");
 	printf("/////////////////////////////////////////////////////////////\n");
 	printf("//                                                         //\n");
 	printf("//   = = = = = = = = = = = = = = = = = = = = = = = = = =   //\n");
 	printf("//   = = = =     STYLE-C HAIR: Cabeleireiros     = = = =   //\n");
 	printf("//   = = = = = = = = = = = = = = = = = = = = = = = = = =   //\n");
-	printf("//             Developed by @Mumber162 - Aug, 2023         //\n");
+	printf("//       Developed by @Mumber162 - since Aug, 2023         //\n");
 	printf("//                                                         //\n");
 	printf("/////////////////////////////////////////////////////////////\n");
 	printf("//                                                         //\n");
