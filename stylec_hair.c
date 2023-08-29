@@ -86,3 +86,31 @@ void telaEquipe(void)
 	printf("//                                                         //\n");
 	printf("/////////////////////////////////////////////////////////////\n");
 }
+
+//===================================================
+
+void menuPrincipal(void)
+{
+	info();
+	printf("/////////////////////////////////////////////////////////////\n");
+	printf("//                                                         //\n");
+	printf("//   = = = = = = = = = = = = = = = = = = = = = = = = = =   //\n");
+	printf("//   = = = -     STYLE-C HAIR: Cabeleireiros     - = = =   //\n");
+	printf("//   = = = = = = = = = = = = = = = = = = = = = = = = = =   //\n");
+	printf("//       Developed by @Mumber162 - since Aug, 2023         //\n");
+	printf("//                                                         //\n");
+	printf("/////////////////////////////////////////////////////////////\n");
+	printf("//                                                         //\n");
+	printf("//     ===============  MENU CLIENTES ===============      //\n");
+	printf("//                                                         //\n");
+	printf("//     1. Cadastrar CLIENTES                               //\n");
+	printf("//     2. Pesquisar CLIENTES                               //\n");
+	printf("//     3. Atualizar CLIENTES                               //\n");
+	printf("//     4. Excluir   CLIENTES                               //\n");
+	printf("//     0 - (SAIR do Programa)                              //\n");
+	printf("//                                                         //\n");
+	printf("/////////////////////////////////////////////////////////////\n");
+	printf("//     Digite a escolha desejada: ");
+	
+    //printf("\t\t>>> Tecle <ENTER> para continuar...\n");
+}
