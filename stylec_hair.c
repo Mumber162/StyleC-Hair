@@ -14,9 +14,11 @@ void info()
 
 int main()
 {
-	menuPrincipal();
-	printf("\n");
-	menuClientes();
+	// menuPrincipal();
+	// printf("\n");
+	// menuClientes();
+
+	telaCadastro_cliente();
 
 	return 0;
 }
