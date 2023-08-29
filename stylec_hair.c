@@ -1,14 +1,10 @@
 #include <stdio.h>
-
-//------------------
-void menuPrincipal(void);
-void telaSobre(void);
-void telaEquipe(void);
-void info();
-//------------------
+#include "main.h"
+#include "clientes.h"
 
 void info()
 {
+	printf("\n");
 	printf("/////////////////////////////////////////////////////////////\n");
 	printf("/       Universidade Federal do Rio Grande do Norte         /\n");
 	printf("/           Centro de Ensino Superior do Serido             /\n");
@@ -19,6 +15,9 @@ void info()
 int main()
 {
 	menuPrincipal();
+	printf("\n");
+	menuClientes();
+
 	return 0;
 }
 
@@ -46,6 +45,7 @@ void menuPrincipal(void)
 	printf("//     0 - (SAIR do Programa)                              //\n");
 	printf("//                                                         //\n");
 	printf("/////////////////////////////////////////////////////////////\n");
+	printf("//                                                         //\n");
 	printf("//     Digite a escolha desejada: ");
 	
     //printf("\t\t>>> Tecle <ENTER> para continuar...\n");
@@ -87,29 +87,23 @@ void telaEquipe(void)
 	printf("/////////////////////////////////////////////////////////////\n");
 }
 
-//===================================================
+//== # == # ===============================================
 
 void menuClientes(void)
 {
-	info();
-	printf("/////////////////////////////////////////////////////////////\n");
-	printf("//                                                         //\n");
-	printf("//   = = = = = = = = = = = = = = = = = = = = = = = = = =   //\n");
-	printf("//   = = = -     STYLE-C HAIR: Cabeleireiros     - = = =   //\n");
-	printf("//   = = = = = = = = = = = = = = = = = = = = = = = = = =   //\n");
-	printf("//       Developed by @Mumber162 - since Aug, 2023         //\n");
-	printf("//                                                         //\n");
+	printf("\n");
 	printf("/////////////////////////////////////////////////////////////\n");
 	printf("//                                                         //\n");
 	printf("//     ===============  MENU CLIENTES ===============      //\n");
 	printf("//                                                         //\n");
-	printf("//     1. Cadastrar CLIENTES                               //\n");
-	printf("//     2. Pesquisar CLIENTES                               //\n");
-	printf("//     3. Atualizar CLIENTES                               //\n");
-	printf("//     4. Excluir   CLIENTES                               //\n");
+	printf("//     1. CADASTRAR Clientes                               //\n");
+	printf("//     2. PESQUISAR Clientes                               //\n");
+	printf("//     3. PESQUISAR Clientes                               //\n");
+	printf("//     4. EXCLUIR   Clientes                               //\n");
 	printf("//     0 - (SAIR do Programa)                              //\n");
 	printf("//                                                         //\n");
 	printf("/////////////////////////////////////////////////////////////\n");
+	printf("//                                                         //\n");
 	printf("//     Digite a escolha desejada: ");
 	
     //printf("\t\t>>> Tecle <ENTER> para continuar...\n");
