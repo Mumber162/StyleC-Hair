@@ -89,7 +89,7 @@ void telaEquipe(void)
 
 //===================================================
 
-void menuPrincipal(void)
+void menuClientes(void)
 {
 	info();
 	printf("/////////////////////////////////////////////////////////////\n");
