@@ -1,3 +1,24 @@
+void menuClientes(void)
+{
+	printf("\n");
+	printf("/////////////////////////////////////////////////////////////\n");
+	printf("//                                                         //\n");
+	printf("//     ===============  MENU CLIENTES ===============      //\n");
+	printf("//                                                         //\n");
+	printf("//     1. CADASTRAR Clientes                               //\n");
+	printf("//     2. PESQUISAR Clientes                               //\n");
+	printf("//     3. PESQUISAR Clientes                               //\n");
+	printf("//     4. EXCLUIR   Clientes                               //\n");
+	printf("//     0 - (SAIR do Programa)                              //\n");
+	printf("//                                                         //\n");
+	printf("/////////////////////////////////////////////////////////////\n");
+	printf("//                                                         //\n");
+	printf("//     Digite a escolha desejada: ");
+	
+    //printf("\t\t>>> Tecle <ENTER> para continuar...\n");
+}
+
+// OPÇÕES -======
 void telaCadastro_cliente(void)
 {
     printf("=======================================================\n");

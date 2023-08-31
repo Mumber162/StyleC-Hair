@@ -43,16 +43,17 @@ void menuPrincipal(void)
 	printf("//     2. Modulo AGENDAMENTOS                              //\n");
 	printf("//     3. Modulo SERVICOS                                  //\n");
 	printf("//     4. Modulo RELATORIOS                                //\n");
-	printf("//     5. Modulo FEEDBACK                                  //\n");
-	printf("//     6. SOBRE                                            //\n");
-	printf("//     7. Time                                             //\n");
+	// printf("//     5. Modulo FEEDBACK                                  //\n");
+	printf("//     5. SOBRE                                            //\n");
+	printf("//     6. Time                                             //\n");
 	printf("//     0 - (SAIR do Programa)                              //\n");
 	printf("//                                                         //\n");
 	printf("/////////////////////////////////////////////////////////////\n");
 	printf("//                                                         //\n");
 	printf("//     Digite a escolha desejada: ");
 	
-    //printf("\t\t>>> Tecle <ENTER> para continuar...\n");
+    printf("\n\t\t>>> Tecle <ENTER> para continuar...\n");
+	getchar();
 }
 
 void telaSobre(void)
@@ -71,6 +72,8 @@ void telaSobre(void)
 	printf("//  maior dedicacao aos clientes e servicos de qualidade.  //\n");
 	printf("//                                                         //\n");
 	printf("/////////////////////////////////////////////////////////////\n");
+	printf("\n\t\t>>> Tecle <ENTER> para continuar...\n");
+	getchar();
 
 }
 
@@ -89,26 +92,8 @@ void telaEquipe(void)
 	printf("//    Git: https://github.com/Mumber162/StyleC-Hair.git    //\n");
 	printf("//                                                         //\n");
 	printf("/////////////////////////////////////////////////////////////\n");
+	printf("\n\t\t>>> Tecle <ENTER> para continuar...\n");
+	getchar();
 }
 
 //== # == # ===============================================
-
-void menuClientes(void)
-{
-	printf("\n");
-	printf("/////////////////////////////////////////////////////////////\n");
-	printf("//                                                         //\n");
-	printf("//     ===============  MENU CLIENTES ===============      //\n");
-	printf("//                                                         //\n");
-	printf("//     1. CADASTRAR Clientes                               //\n");
-	printf("//     2. PESQUISAR Clientes                               //\n");
-	printf("//     3. PESQUISAR Clientes                               //\n");
-	printf("//     4. EXCLUIR   Clientes                               //\n");
-	printf("//     0 - (SAIR do Programa)                              //\n");
-	printf("//                                                         //\n");
-	printf("/////////////////////////////////////////////////////////////\n");
-	printf("//                                                         //\n");
-	printf("//     Digite a escolha desejada: ");
-	
-    //printf("\t\t>>> Tecle <ENTER> para continuar...\n");
-}
