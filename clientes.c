@@ -31,7 +31,7 @@ void telaAtualiza_cliente(void)
 
 }
 
-void telaExclusao_cliente(void)
+void telaExclui_cliente(void)
 {
     printf("=======================================================\n");
 	printf("::                                                   ::\n");

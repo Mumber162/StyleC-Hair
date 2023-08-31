@@ -12,17 +12,19 @@ void info()
 	printf("/            Disciplina DCT1106 -- Programacao              /\n");
 }
 
+// PROGRAMA PRINCIPAL
 int main()
 {
-	// menuPrincipal();
-	// printf("\n");
-	// menuClientes();
+	menuPrincipal();
+	printf("\n");
+	menuClientes();
 
 	telaCadastro_cliente();
 
 	return 0;
 }
 
+//FUNÇÕES
 void menuPrincipal(void)
 {
 	info();
