@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include "main.h"
 #include "clientes.h"
+#include "funcionarios.h"
+#include "agendamentos.h"
 
 void info()
 {
@@ -42,11 +44,12 @@ void menuPrincipal(void)
 	printf("//                                                         //\n");
 	printf("//     1. Modulo CLIENTES                                  //\n");
 	printf("//     2. Modulo AGENDAMENTOS                              //\n");
-	printf("//     3. Modulo SERVICOS                                  //\n");
-	printf("//     4. Modulo RELATORIOS                                //\n");
+	printf("//     3. Modulo FUNCIONARIOS                              //\n");
+	printf("//     4. Modulo SERVICOS                                  //\n");
+	printf("//     5. Modulo RELATORIOS                                //\n");
 	// printf("//     5. Modulo FEEDBACK                                  //\n");
-	printf("//     5. SOBRE                                            //\n");
-	printf("//     6. Time                                             //\n");
+	printf("//     6. SOBRE                                            //\n");
+	printf("//     7. Time                                             //\n");
 	printf("//     0 - (SAIR do Programa)                              //\n");
 	printf("//                                                         //\n");
 	printf("/////////////////////////////////////////////////////////////\n");

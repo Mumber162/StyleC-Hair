@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 void menuClientes(void)
 {
 	printf("\n");

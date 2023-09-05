@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 void menuAgendamentos(void)
 {
 	printf("\n");
