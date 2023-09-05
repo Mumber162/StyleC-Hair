@@ -19,9 +19,14 @@ int main()
 {
 	menuPrincipal();
 	printf("\n");
-	menuClientes();
 
-	telaCadastro_cliente();
+	menuClientes();
+	printf("\n");
+
+	menuFuncionarios();
+	printf("\n");
+
+	menuAgendamentos();
 
 	return 0;
 }
@@ -47,7 +52,6 @@ void menuPrincipal(void)
 	printf("//     3. Modulo FUNCIONARIOS                              //\n");
 	printf("//     4. Modulo SERVICOS                                  //\n");
 	printf("//     5. Modulo RELATORIOS                                //\n");
-	// printf("//     5. Modulo FEEDBACK                                  //\n");
 	printf("//     6. SOBRE                                            //\n");
 	printf("//     7. Time                                             //\n");
 	printf("//     0 - (SAIR do Programa)                              //\n");
@@ -55,10 +59,10 @@ void menuPrincipal(void)
 	printf("/////////////////////////////////////////////////////////////\n");
 	printf("//                                                         //\n");
 	printf("//     Digite a escolha desejada: ");
-	scanf("%d", opcao);
+	// scanf("%d", opcao);
 	
     // printf("\n\t\t>>> Tecle <ENTER> para continuar...\n");
-	getchar();
+	// getchar();
 }
 
 void telaSobre(void)

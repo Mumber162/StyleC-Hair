@@ -1,16 +1,16 @@
 #include <stdio.h>
 
-void menuFuncionarios(void)
+void menuServicos(void)
 {
 	printf("\n");
 	printf("/////////////////////////////////////////////////////////////\n");
 	printf("//                                                         //\n");
-	printf("//     =============  MENU Funcionarios =============      //\n");
+	printf("//     ===============  MENU SERVICOS ===============      //\n");
 	printf("//                                                         //\n");
-	printf("//     1. CADASTRAR Funcionarios                           //\n");
-	printf("//     2. PESQUISAR Funcionarios                           //\n");
-	printf("//     3. PESQUISAR Funcionarios                           //\n");
-	printf("//     4. EXCLUIR   Funcionarios                           //\n");
+	printf("//     1. CADASTRAR Servico                                //\n");
+	printf("//     2. PESQUISAR Servico                                //\n");
+	printf("//     3. PESQUISAR Servico                                //\n");
+	printf("//     4. EXCLUIR   Servico                                //\n");
 	printf("//     0 - (SAIR do Programa)                              //\n");
 	printf("//                                                         //\n");
 	printf("/////////////////////////////////////////////////////////////\n");
@@ -21,50 +21,47 @@ void menuFuncionarios(void)
 }
 
 // OPÇÕES -======
-void telaCadastro_func(void)
+void telaCadastro_serv(void)
 {
 	printf("\n");
     printf("::===================================================::\n");
 	printf("::                                                   ::\n");
-	printf("::    - - - ---  CADASTRAR Funcionarios --- - - -    ::\n");
+	printf("::    - - - - ---  CADASTRAR SERVICOS --- - - - -    ::\n");
 	printf("::                                                   ::\n");
-	printf("::    CPF do Funcionario:     \n");
-	printf("::    Nome do Funcionario:    \n");
-	printf("::    Num. Telefone:          \n");
-	printf("::    Cargo:                  \n");
-	printf("::    Codigo para ID:         \n");
+	printf("::    Tipo de Servico:      \n");
+	printf("::    Codigo do Servico:    \n");
 
 }
 
-void telaPequisa_func(void)
+void telaPequisa_serv(void)
 {
 	printf("\n");
     printf("::===================================================::\n");
 	printf("::                                                   ::\n");
-	printf("::    - - - ---  PESQUISAR Funcionarios --- - - -    ::\n");
+	printf("::    - - - - ---  PESQUISAR SERVICOS --- - - - -    ::\n");
 	printf("::                                                   ::\n");
-	printf("::    Digite o Codigo ID:    \n");
+	printf("::    Codigo do Servico:    \n");
 
 }
 
-void telaAtualiza_func(void)
+void telaAtualiza_cliente(void)
 {
 	printf("\n");
     printf("::===================================================::\n");
 	printf("::                                                   ::\n");
-	printf("::    - - - ---  ATUALIZAR Funcionarios --- - - -    ::\n");
+	printf("::    - - - - ---  ATUALIZAR SERVICOS --- - - - -    ::\n");
 	printf("::                                                   ::\n");
-	printf("::    Digite o Codigo ID:    \n");
+	printf("::    Codigo do Servico:    \n");
 
 }
 
-void telaExclui_func(void)
+void telaExclui_cliente(void)
 {
 	printf("\n");
     printf("::===================================================::\n");
 	printf("::                                                   ::\n");
-	printf("::    - - - - ---  EXCLUIR Funcionarios --- - - -    ::\n");
+	printf("::    - - - - ---  EXCLUIR SERVICOS --- - - - -      ::\n");
 	printf("::                                                   ::\n");
-	printf("::    Digite o Codigo ID:    \n");
+	printf("::    Codigo do Servico:    \n");
 
 }

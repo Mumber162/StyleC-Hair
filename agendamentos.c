@@ -23,12 +23,14 @@ void menuAgendamentos(void)
 // OPÇÕES -======
 void telaCadastro_agend(void)
 {
+	printf("\n");
     printf("::===================================================::\n");
 	printf("::                                                   ::\n");
 	printf("::    - - - ---  CADASTRAR AGENDAMENTO --- - - -     ::\n");
 	printf("::                                                   ::\n");
 	printf("::    Data (dd/mm/aaaa):      \n");
 	printf("::    Hora (--h--):           \n");
+	printf("::    Preco (xx,xx):          \n");
 	printf("::    Servico (f.key):        \n");
 	printf("::    Codigo do Agendamento:  \n");
 
@@ -36,6 +38,7 @@ void telaCadastro_agend(void)
 
 void telaPequisa_agend(void)
 {
+	printf("\n");
     printf("::===================================================::\n");
 	printf("::                                                   ::\n");
 	printf("::    - - - ---  PESQUISAR AGENDAMENTO --- - - -     ::\n");
@@ -46,6 +49,7 @@ void telaPequisa_agend(void)
 
 void telaAtualiza_agend(void)
 {
+	printf("\n");
     printf("::===================================================::\n");
 	printf("::                                                   ::\n");
 	printf("::    - - - ---  ATUALIZAR AGENDAMENTO --- - - -     ::\n");
@@ -56,6 +60,7 @@ void telaAtualiza_agend(void)
 
 void telaExclui_agend(void)
 {
+	printf("\n");
     printf("::===================================================::\n");
 	printf("::                                                   ::\n");
 	printf("::    - - - ---  EXCLUIR AGENDAMENTO --- - - - -     ::\n");

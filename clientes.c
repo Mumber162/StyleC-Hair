@@ -23,6 +23,7 @@ void menuClientes(void)
 // OPÇÕES -======
 void telaCadastro_cliente(void)
 {
+	printf("\n");
     printf("::===================================================::\n");
 	printf("::                                                   ::\n");
 	printf("::    - - - - ---  CADASTRAR CLIENTES --- - - - -    ::\n");
@@ -36,6 +37,7 @@ void telaCadastro_cliente(void)
 
 void telaPequisa_cliente(void)
 {
+	printf("\n");
     printf("::===================================================::\n");
 	printf("::                                                   ::\n");
 	printf("::    - - - - ---  PESQUISAR CLIENTES --- - - - -    ::\n");
@@ -46,6 +48,7 @@ void telaPequisa_cliente(void)
 
 void telaAtualiza_cliente(void)
 {
+	printf("\n");
     printf("::===================================================::\n");
 	printf("::                                                   ::\n");
 	printf("::    - - - - ---  ATUALIZAR CLIENTES --- - - - -    ::\n");
@@ -56,6 +59,7 @@ void telaAtualiza_cliente(void)
 
 void telaExclui_cliente(void)
 {
+	printf("\n");
     printf("::===================================================::\n");
 	printf("::                                                   ::\n");
 	printf("::    - - - - ---  EXCLUIR CLIENTES --- - - - -      ::\n");
