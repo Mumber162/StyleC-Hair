@@ -1,14 +1,14 @@
-void menuFuncionarios(void)
+void menuAgendamentos(void)
 {
 	printf("\n");
 	printf("/////////////////////////////////////////////////////////////\n");
 	printf("//                                                         //\n");
-	printf("//     =============  MENU Funcionarios =============      //\n");
+	printf("//     =============  MENU AGENDAMENTOS =============      //\n");
 	printf("//                                                         //\n");
-	printf("//     1. CADASTRAR Funcionarios                           //\n");
-	printf("//     2. PESQUISAR Funcionarios                           //\n");
-	printf("//     3. PESQUISAR Funcionarios                           //\n");
-	printf("//     4. EXCLUIR   Funcionarios                           //\n");
+	printf("//     1. CADASTRAR Agendamento                            //\n");
+	printf("//     2. PESQUISAR Agendamento                            //\n");
+	printf("//     3. PESQUISAR Agendamento                            //\n");
+	printf("//     4. EXCLUIR   Agendamento                            //\n");
 	printf("//     0 - (SAIR do Programa)                              //\n");
 	printf("//                                                         //\n");
 	printf("/////////////////////////////////////////////////////////////\n");
@@ -19,46 +19,45 @@ void menuFuncionarios(void)
 }
 
 // OPÇÕES -======
-void telaCadastro_func(void)
+void telaCadastro_agend(void)
 {
     printf("::===================================================::\n");
 	printf("::                                                   ::\n");
-	printf("::    - - - ---  CADASTRAR Funcionarios --- - - -    ::\n");
+	printf("::    - - - ---  CADASTRAR AGENDAMENTO --- - - -     ::\n");
 	printf("::                                                   ::\n");
-	printf("::    CPF do Funcionario:     \n");
-	printf("::    Nome do Funcionario:    \n");
-	printf("::    Num. Telefone:          \n");
-	printf("::    Cargo:                  \n");
-	printf("::    Codigo para ID:         \n");
+	printf("::    Data (dd/mm/aaaa):      \n");
+	printf("::    Hora (--h--):           \n");
+	printf("::    Servico (f.key):        \n");
+	printf("::    Codigo do Agendamento:  \n");
 
 }
 
-void telaPequisa_func(void)
+void telaPequisa_agend(void)
 {
     printf("::===================================================::\n");
 	printf("::                                                   ::\n");
-	printf("::    - - - ---  PESQUISAR Funcionarios --- - - -    ::\n");
+	printf("::    - - - ---  PESQUISAR AGENDAMENTO --- - - -     ::\n");
 	printf("::                                                   ::\n");
-	printf("::    Digite o Codigo ID:    \n");
+	printf("::    Digite o Codigo do Agend.:    \n");
 
 }
 
-void telaAtualiza_func(void)
+void telaAtualiza_agend(void)
 {
     printf("::===================================================::\n");
 	printf("::                                                   ::\n");
-	printf("::    - - - ---  ATUALIZAR Funcionarios --- - - -    ::\n");
+	printf("::    - - - ---  ATUALIZAR AGENDAMENTO --- - - -     ::\n");
 	printf("::                                                   ::\n");
-	printf("::    Digite o Codigo ID:    \n");
+	printf("::    Digite o Codigo do Agend.:    \n");
 
 }
 
-void telaExclui_func(void)
+void telaExclui_agend(void)
 {
     printf("::===================================================::\n");
 	printf("::                                                   ::\n");
-	printf("::    - - - - ---  EXCLUIR Funcionarios --- - - -    ::\n");
+	printf("::    - - - ---  EXCLUIR AGENDAMENTO --- - - - -     ::\n");
 	printf("::                                                   ::\n");
-	printf("::    Digite o Codigo ID:    \n");
+	printf("::    Digite o Codigo do Agend.:    \n");
 
 }

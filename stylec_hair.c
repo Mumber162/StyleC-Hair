@@ -28,6 +28,7 @@ int main()
 void menuPrincipal(void)
 {
 	info();
+	int opcao;
 	printf("/////////////////////////////////////////////////////////////\n");
 	printf("//                                                         //\n");
 	printf("//   = = = = = = = = = = = = = = = = = = = = = = = = = =   //\n");
@@ -51,8 +52,9 @@ void menuPrincipal(void)
 	printf("/////////////////////////////////////////////////////////////\n");
 	printf("//                                                         //\n");
 	printf("//     Digite a escolha desejada: ");
+	scanf("%d", opcao);
 	
-    printf("\n\t\t>>> Tecle <ENTER> para continuar...\n");
+    // printf("\n\t\t>>> Tecle <ENTER> para continuar...\n");
 	getchar();
 }
 

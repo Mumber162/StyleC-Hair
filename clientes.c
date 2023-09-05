@@ -21,7 +21,7 @@ void menuClientes(void)
 // OPÇÕES -======
 void telaCadastro_cliente(void)
 {
-    printf("=======================================================\n");
+    printf("::===================================================::\n");
 	printf("::                                                   ::\n");
 	printf("::    - - - - ---  CADASTRAR CLIENTES --- - - - -    ::\n");
 	printf("::                                                   ::\n");
@@ -34,7 +34,7 @@ void telaCadastro_cliente(void)
 
 void telaPequisa_cliente(void)
 {
-    printf("=======================================================\n");
+    printf("::===================================================::\n");
 	printf("::                                                   ::\n");
 	printf("::    - - - - ---  PESQUISAR CLIENTES --- - - - -    ::\n");
 	printf("::                                                   ::\n");
@@ -44,7 +44,7 @@ void telaPequisa_cliente(void)
 
 void telaAtualiza_cliente(void)
 {
-    printf("=======================================================\n");
+    printf("::===================================================::\n");
 	printf("::                                                   ::\n");
 	printf("::    - - - - ---  ATUALIZAR CLIENTES --- - - - -    ::\n");
 	printf("::                                                   ::\n");
@@ -54,9 +54,9 @@ void telaAtualiza_cliente(void)
 
 void telaExclui_cliente(void)
 {
-    printf("=======================================================\n");
+    printf("::===================================================::\n");
 	printf("::                                                   ::\n");
-	printf("::    - - - - ---  EXCLUIR CLIENTES --- - - - -    ::\n");
+	printf("::    - - - - ---  EXCLUIR CLIENTES --- - - - -      ::\n");
 	printf("::                                                   ::\n");
 	printf("::    Digite o CPF:    \n");
 
