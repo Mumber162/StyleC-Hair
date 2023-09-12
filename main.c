@@ -20,13 +20,6 @@ int main()
 	menuPrincipal();
 	printf("\n");
 
-	menuClientes();
-	printf("\n");
-
-	menuFuncionarios();
-	printf("\n");
-
-	menuAgendamentos();
 
 	return 0;
 }

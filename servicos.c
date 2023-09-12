@@ -44,7 +44,7 @@ void telaPequisa_serv(void)
 
 }
 
-void telaAtualiza_cliente(void)
+void telaAtualiza_serv(void)
 {
 	printf("\n");
     printf("::===================================================::\n");
@@ -55,7 +55,7 @@ void telaAtualiza_cliente(void)
 
 }
 
-void telaExclui_cliente(void)
+void telaExclui_serv(void)
 {
 	printf("\n");
     printf("::===================================================::\n");
