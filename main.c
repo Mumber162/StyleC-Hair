@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "main.h"
 #include "clientes.h"
 #include "funcionarios.h"
@@ -7,7 +8,7 @@
 
 void info()
 {
-	printf("\n");
+	system("@cls||clear");
 	printf("/////////////////////////////////////////////////////////////\n");
 	printf("/       Universidade Federal do Rio Grande do Norte         /\n");
 	printf("/           Centro de Ensino Superior do Serido             /\n");

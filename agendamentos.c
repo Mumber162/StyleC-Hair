@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 void menuAgendamentos(void)
 {
@@ -9,7 +10,7 @@ void menuAgendamentos(void)
 	printf("//                                                         //\n");
 	printf("//     1. CADASTRAR Agendamento                            //\n");
 	printf("//     2. PESQUISAR Agendamento                            //\n");
-	printf("//     3. PESQUISAR Agendamento                            //\n");
+	printf("//     3. ATUALIZAR Agendamento                            //\n");
 	printf("//     4. EXCLUIR   Agendamento                            //\n");
 	printf("//     0 - (Voltar)                                        //\n");
 	printf("//                                                         //\n");
@@ -23,7 +24,7 @@ void menuAgendamentos(void)
 // OPÇÕES -======
 void telaCadastro_agend(void)
 {
-	printf("\n");
+	printf("\n\n\n");
     printf("::===================================================::\n");
 	printf("::                                                   ::\n");
 	printf("::    - - - ---  CADASTRAR AGENDAMENTO --- - - -     ::\n");
@@ -36,9 +37,9 @@ void telaCadastro_agend(void)
 
 }
 
-void telaPequisa_agend(void)
+void telaPesquisa_agend(void)
 {
-	printf("\n");
+	printf("\n\n\n");
     printf("::===================================================::\n");
 	printf("::                                                   ::\n");
 	printf("::    - - - ---  PESQUISAR AGENDAMENTO --- - - -     ::\n");
@@ -49,7 +50,7 @@ void telaPequisa_agend(void)
 
 void telaAtualiza_agend(void)
 {
-	printf("\n");
+	printf("\n\n\n");
     printf("::===================================================::\n");
 	printf("::                                                   ::\n");
 	printf("::    - - - ---  ATUALIZAR AGENDAMENTO --- - - -     ::\n");
@@ -60,7 +61,7 @@ void telaAtualiza_agend(void)
 
 void telaExclui_agend(void)
 {
-	printf("\n");
+	printf("\n\n\n");
     printf("::===================================================::\n");
 	printf("::                                                   ::\n");
 	printf("::    - - - ---  EXCLUIR AGENDAMENTO --- - - - -     ::\n");
