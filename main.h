@@ -2,12 +2,12 @@
 #define MAIN_H
 
 //- Assinatura das Funções -------
-void menuPrincipal(void);
+void info();
 void telaSobre(void);
 void telaEquipe(void);
-void info();
+void relatorios(void);
 
-void menuClientes(void);
+void menuPrincipal(void);
 //-----------------------------
 
 #endif

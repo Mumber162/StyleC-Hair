@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "clientes.h"
 
 void menuClientes(void)
 {
@@ -24,8 +25,11 @@ void menuClientes(void)
 	case 1:
 		telaCadastro_cliente();
 		break;
+	case 0:
+		return;
 	
 	default:
+		printf("Opcao invalida, tente novamente...");
 		break;
 	}
 }

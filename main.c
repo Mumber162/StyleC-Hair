@@ -26,33 +26,33 @@ int main()
 
 		switch (opcao)
 		{
-			case 1:
-				menuClientes();
-				break;
-			case 2:
-				menuAgendamentos();
-				break;
-			case 3:
-				menuFuncionarios();
-				break;
-			case 4:
-				menuServicos();
-				break;
-			case 5:
-				relatorios();
-				break;
-			case 6:
-				telaSobre();
-				break;
-			case 7:
-				telaEquipe();
-				break;
-			case 0:
-				printf("Ate a proxima!");
-				break;
-			default:
-				printf("Opcao invalida, tente novamente...");
-				break;
+		case 1:
+			menuClientes();
+			break;
+		case 2:
+			menuAgendamentos();
+			break;
+		case 3:
+			menuFuncionarios();
+			break;
+		case 4:
+			menuServicos();
+			break;
+		case 5:
+			relatorios();
+			break;
+		case 6:
+			telaSobre();
+			break;
+		case 7:
+			telaEquipe();
+			break;
+		case 0:
+			printf("Ate a proxima!");
+			break;
+		default:
+			printf("Opcao invalida, tente novamente...");
+			break;
 		}
 	}
 	printf("\n");
