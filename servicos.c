@@ -11,13 +11,11 @@ void menuServicos(void)
 	printf("//     2. PESQUISAR Servico                                //\n");
 	printf("//     3. PESQUISAR Servico                                //\n");
 	printf("//     4. EXCLUIR   Servico                                //\n");
-	printf("//     0 - (SAIR do Programa)                              //\n");
+	printf("//     0 - (Voltar)                                        //\n");
 	printf("//                                                         //\n");
 	printf("/////////////////////////////////////////////////////////////\n");
 	printf("//                                                         //\n");
 	printf("//     Digite a escolha desejada: ");
-	
-    //printf("\t\t>>> Tecle <ENTER> para continuar...\n");
 }
 
 // OPÇÕES -======

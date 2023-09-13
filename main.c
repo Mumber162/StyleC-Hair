@@ -3,6 +3,7 @@
 #include "clientes.h"
 #include "funcionarios.h"
 #include "agendamentos.h"
+#include "servicos.h"
 
 void info()
 {
@@ -17,9 +18,44 @@ void info()
 // PROGRAMA PRINCIPAL
 int main()
 {
-	menuPrincipal();
-	printf("\n");
+	int opcao = 1;
+	while (opcao!=0)
+	{
+		menuPrincipal();
+		scanf("%d", &opcao);
 
+		switch (opcao)
+		{
+			case 1:
+				menuClientes();
+				break;
+			case 2:
+				menuAgendamentos();
+				break;
+			case 3:
+				menuFuncionarios();
+				break;
+			case 4:
+				menuServicos();
+				break;
+			case 5:
+				relatorios();
+				break;
+			case 6:
+				telaSobre();
+				break;
+			case 7:
+				telaEquipe();
+				break;
+			case 0:
+				printf("Ate a proxima!");
+				break;
+			default:
+				printf("Opcao invalida, tente novamente...");
+				break;
+		}
+	}
+	printf("\n");
 
 	return 0;
 }
@@ -52,10 +88,7 @@ void menuPrincipal(void)
 	printf("/////////////////////////////////////////////////////////////\n");
 	printf("//                                                         //\n");
 	printf("//     Digite a escolha desejada: ");
-	// scanf("%d", opcao);
 	
-    // printf("\n\t\t>>> Tecle <ENTER> para continuar...\n");
-	// getchar();
 }
 
 void telaSobre(void)
@@ -96,6 +129,11 @@ void telaEquipe(void)
 	printf("/////////////////////////////////////////////////////////////\n");
 	printf("\n\t\t>>> Tecle <ENTER> para continuar...\n");
 	getchar();
+}
+
+void relatorios(void)
+{
+	printf("Tem nada aqui n");
 }
 
 //== # == # ===============================================

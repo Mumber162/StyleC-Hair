@@ -11,7 +11,7 @@ void menuFuncionarios(void)
 	printf("//     2. PESQUISAR Funcionarios                           //\n");
 	printf("//     3. PESQUISAR Funcionarios                           //\n");
 	printf("//     4. EXCLUIR   Funcionarios                           //\n");
-	printf("//     0 - (SAIR do Programa)                              //\n");
+	printf("//     0 - (Voltar)                                        //\n");
 	printf("//                                                         //\n");
 	printf("/////////////////////////////////////////////////////////////\n");
 	printf("//                                                         //\n");

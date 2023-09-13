@@ -11,7 +11,7 @@ void menuAgendamentos(void)
 	printf("//     2. PESQUISAR Agendamento                            //\n");
 	printf("//     3. PESQUISAR Agendamento                            //\n");
 	printf("//     4. EXCLUIR   Agendamento                            //\n");
-	printf("//     0 - (SAIR do Programa)                              //\n");
+	printf("//     0 - (Voltar)                                        //\n");
 	printf("//                                                         //\n");
 	printf("/////////////////////////////////////////////////////////////\n");
 	printf("//                                                         //\n");

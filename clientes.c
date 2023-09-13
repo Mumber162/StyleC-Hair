@@ -2,6 +2,7 @@
 
 void menuClientes(void)
 {
+	int opt;
 	printf("\n");
 	printf("/////////////////////////////////////////////////////////////\n");
 	printf("//                                                         //\n");
@@ -11,13 +12,22 @@ void menuClientes(void)
 	printf("//     2. PESQUISAR Clientes                               //\n");
 	printf("//     3. PESQUISAR Clientes                               //\n");
 	printf("//     4. EXCLUIR   Clientes                               //\n");
-	printf("//     0 - (SAIR do Programa)                              //\n");
+	printf("//     0 - (Voltar)                                        //\n");
 	printf("//                                                         //\n");
 	printf("/////////////////////////////////////////////////////////////\n");
 	printf("//                                                         //\n");
 	printf("//     Digite a escolha desejada: ");
+	scanf("%d", &opt);
+
+	switch (opt)
+	{
+	case 1:
+		telaCadastro_cliente();
+		break;
 	
-    //printf("\t\t>>> Tecle <ENTER> para continuar...\n");
+	default:
+		break;
+	}
 }
 
 // OPÇÕES -======
