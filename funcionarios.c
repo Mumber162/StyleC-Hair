@@ -7,7 +7,7 @@ void menuFuncionarios(void)
 	int opt = 1;
 	while (opt!=0)
 	{
-		printf("\n");
+		system("@cls||clear");
 		printf("/////////////////////////////////////////////////////////////\n");
 		printf("//                                                         //\n");
 		printf("//     =============  MENU Funcionarios =============      //\n");
@@ -21,6 +21,7 @@ void menuFuncionarios(void)
 		printf("/////////////////////////////////////////////////////////////\n");
 		printf("//                                                         //\n");
 		printf("//     Digite a escolha desejada: ");
+		scanf("%d", &opt);
 
 		switch (opt)
 		{

@@ -68,9 +68,9 @@ void menuPrincipal(void)
 	int opcao;
 	printf("/////////////////////////////////////////////////////////////\n");
 	printf("//                                                         //\n");
-	printf("//   = = = = = = = = = = = = = = = = = = = = = = = = = =   //\n");
+	printf("//   ---------------------------------------------------   //\n");
 	printf("//   = = = -     STYLE-C HAIR: Cabeleireiros     - = = =   //\n");
-	printf("//   = = = = = = = = = = = = = = = = = = = = = = = = = =   //\n");
+	printf("//   ---------------------------------------------------   //\n");
 	printf("//       Developed by @Mumber162 - since Aug, 2023         //\n");
 	printf("//                                                         //\n");
 	printf("/////////////////////////////////////////////////////////////\n");
@@ -108,9 +108,8 @@ void telaSobre(void)
 	printf("//  maior dedicacao aos clientes e servicos de qualidade.  //\n");
 	printf("//                                                         //\n");
 	printf("/////////////////////////////////////////////////////////////\n");
-	printf("\n\t\t>>> Tecle <ENTER> para continuar...\n");
-	getchar();
-
+	printf("\n\t>>> Tecle <ENTER> para continuar...\n");
+	getchar(); getchar();
 }
 
 void telaEquipe(void)
@@ -128,13 +127,15 @@ void telaEquipe(void)
 	printf("//    Git: https://github.com/Mumber162/StyleC-Hair.git    //\n");
 	printf("//                                                         //\n");
 	printf("/////////////////////////////////////////////////////////////\n");
-	printf("\n\t\t>>> Tecle <ENTER> para continuar...\n");
-	getchar();
+	printf("\n\t>>> Tecle <ENTER> para continuar...\n");
+	getchar(); getchar();
 }
 
 void relatorios(void)
 {
-	printf("Tem nada aqui n");
+	printf("Tem nada aqui n ainda");
+	printf("\n\t>>> Tecle <ENTER> para continuar...\n");
+	getchar(); getchar();
 }
 
 //== # == # ===============================================
