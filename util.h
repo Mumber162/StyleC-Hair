@@ -2,7 +2,7 @@
 #define UTIL_H
 
 //- Assinatura das Funções -------
-bool validarNome(const char *nome);
+// bool validarNome(const char *nome);
 //-----------------------------
 
 #endif

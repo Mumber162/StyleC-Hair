@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "agendamentos.h"
+#include "util.h"
 
 void menuAgendamentos(void)
 {
@@ -55,13 +56,15 @@ void telaCadastro_agend(void)
 	printf("::                                                   ::\n");
 	printf("::    - - - ---  CADASTRAR AGENDAMENTO --- - - -     ::\n");
 	printf("::                                                   ::\n");
-	printf("::    Data (dd/mm/aaaa):      \n");
-	printf("::    Hora (--h--):           \n");
-	printf("::    Preco (RR.cc):          \n");
-	printf("::    Servico (foreign key):  \n");
-	printf("::    Codigo do Agendamento:  \n");
-	printf("::                            \n");
-	printf("::    0 - (Voltar)            \n");
+	printf("::    Data (dd/mm/aaaa):                             \n");
+	printf("::    Hora (--h--):                                  \n");
+	printf("::    Preco (RR.cc):                                 \n");
+	printf("::    Servico (foreign key):                         \n");
+	printf("::    Cliente (foreign key):                         \n");
+	printf("::    Funcionario que fara o servico (foreign key):  \n");
+	printf("::                                                   \n");
+	printf("::    Codigo do Agendamento:                         \n");
+	printf("::    0 - (Voltar)                                   \n");
 	
 	int back;
 	scanf("%d", &back);
@@ -118,4 +121,19 @@ void telaExclui_agend(void)
 	scanf("%d", &back);
 	if (back==0) { return; }
 
+}
+
+void telaExibe_agend(void)
+{
+	printf("//                                                           \n");
+	printf("//    CLIENTE - Cliente Silveira da Clientela Gomes          \n");
+	printf("//    SERVICO - Corte                                        \n");
+	printf("//    DATA    - 12/12/2023                                   \n");
+	printf("//    HORARIO - 18h30                                        \n");
+	printf("//                                                           \n");
+	printf("//    VALOR   - RS 25.00                                     \n");
+	printf("//    CABELEIREIRO(a) - Fagundes                             \n");
+	printf("//    CODIGO DO AGEND. - 0A13                                \n");
+	printf("//                                                           \n");
+	printf("/////////////////////////////////////////////////////////////\n");
 }

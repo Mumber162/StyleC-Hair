@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "servicos.h"
+#include "util.h"
 
 void menuServicos(void)
 {
@@ -55,10 +56,11 @@ void telaCadastro_serv(void)
 	printf("::                                                   ::\n");
 	printf("::    - - - - ---  CADASTRAR SERVICOS --- - - - -    ::\n");
 	printf("::                                                   ::\n");
-	printf("::    Tipo de Servico:      \n");
-	printf("::    Codigo do Servico:    \n");
-	printf("::                          \n");
-	printf("::    0 - (Voltar)          \n");
+	printf("::    Tipo de Servico:                     \n");
+	printf("::    Duracao media de Servico (em min):   \n");
+	printf("::    Codigo do Servico:                   \n");
+	printf("::                                         \n");
+	printf("::    0 - (Voltar)                         \n");
 	
 	int back;
 	scanf("%d", &back);
@@ -115,4 +117,18 @@ void telaExclui_serv(void)
 	scanf("%d", &back);
 	if (back==0) { return; }
 
+}
+
+void telaExibe_serv(void)
+{
+	printf("//                                                           \n");
+	printf("//    Tipo: Corte                                            \n");
+	printf("//    Duracao: 30 min                                        \n");
+	printf("//    Codigo: C02                                            \n");
+	printf("//                                                           \n");
+	printf("//    Tipo: Tingir                                           \n");
+	printf("//    Duracao: 60 min                                        \n");
+	printf("//    Codigo: T04                                            \n");
+	printf("//                                                           \n");
+	printf("/////////////////////////////////////////////////////////////\n");
 }

@@ -5,6 +5,7 @@
 #include "funcionarios.h"
 #include "agendamentos.h"
 #include "servicos.h"
+#include "util.h"
 
 void info()
 {
@@ -133,7 +134,48 @@ void telaEquipe(void)
 
 void relatorios(void)
 {
-	printf("Tem nada aqui n ainda");
+	info();
+	printf("/////////////////////////////////////////////////////////////\n");
+	printf("//                                                         //\n");
+	printf("//       ============    RELATORIOS   ============         //\n");
+	printf("//                                                         //\n");
+	printf("//_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _//\n");
+	printf("//                                                         //\n");
+	printf("//                        CLIENTES                         //\n");
+	printf("//                                                         //\n");
+	printf("//-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //\n");
+	telaExibe_cliente();
+
+	printf("\n\t>>> Tecle <ENTER> para continuar...\n");
+	getchar(); getchar();
+
+	printf("//_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _//\n");
+	printf("//                                                         //\n");
+	printf("//                      AGENDAMENTOS                       //\n");
+	printf("//                                                         //\n");
+	printf("//-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //\n");
+	telaExibe_agend();
+
+	printf("\n\t>>> Tecle <ENTER> para continuar...\n");
+	getchar(); getchar();
+
+	printf("//_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _//\n");
+	printf("//                                                         //\n");
+	printf("//                      FUNCIONARIOS                       //\n");
+	printf("//                                                         //\n");
+	printf("//-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //\n");
+	telaExibe_func();
+
+	printf("\n\t>>> Tecle <ENTER> para continuar...\n");
+	getchar(); getchar();
+
+	printf("//_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _//\n");
+	printf("//                                                         //\n");
+	printf("//                        SERVICOS                         //\n");
+	printf("//                                                         //\n");
+	printf("//-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //\n");
+	telaExibe_serv();
+
 	printf("\n\t>>> Tecle <ENTER> para continuar...\n");
 	getchar(); getchar();
 }

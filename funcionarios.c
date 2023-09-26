@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "funcionarios.h"
+#include "util.h"
 
 void menuFuncionarios(void)
 {
@@ -57,6 +58,7 @@ void telaCadastro_func(void)
 	printf("::                                                   ::\n");
 	printf("::    CPF do Funcionario:     \n");
 	printf("::    Nome do Funcionario:    \n");
+	printf("::    Email do Funcionario:   \n");
 	printf("::    Num. Telefone:          \n");
 	printf("::    Cargo:                  \n");
 	printf("::    Codigo para ID:         \n");
@@ -118,4 +120,17 @@ void telaExclui_func(void)
 	scanf("%d", &back);
 	if (back==0) { return; }
 
+}
+
+void telaExibe_func(void)
+{
+	printf("//                                                           \n");
+	printf("//    Fagundes - FG2523                                      \n");
+	printf("//                                                           \n");
+	printf("//    E-mail:   fagundes@ufrn.edu.br                         \n");
+	printf("//    Telefone: 999275724                                    \n");
+	printf("//    CPF:      52324899811                                  \n");
+	printf("//    Cargo:    Barbeiro                                     \n");
+	printf("//                                                           \n");
+	printf("/////////////////////////////////////////////////////////////\n");
 }

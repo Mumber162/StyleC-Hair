@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "clientes.h"
+#include "util.h"
 
 void menuClientes(void)
 {
@@ -50,6 +51,10 @@ void menuClientes(void)
 // OPÇÕES -======
 void telaCadastro_cliente(void)
 {
+	char nome[30];
+	char cpf[12];
+	char email[40];
+	char tel[12];
 	printf("\n\n\n");
     printf("::===================================================::\n");
 	printf("::                                                   ::\n");
@@ -57,6 +62,7 @@ void telaCadastro_cliente(void)
 	printf("::                                                   ::\n");
 	printf("::    CPF do Cliente:     \n");
 	printf("::    Nome do Cliente:    \n");
+	printf("::    E-mail do Cliente:  \n");
 	printf("::    Num. Telefone:      \n");
 	printf("::    Tipo de Cabelo:     \n");
 	printf("::                        \n");
@@ -115,4 +121,17 @@ void telaExclui_cliente(void)
 	int back;
 	scanf("%d", &back);
 	if (back==0) { return; }
+}
+
+void telaExibe_cliente(void)
+{
+	printf("//                                                           \n");
+	printf("//    Cliente Silveira da Clientela Gomes                    \n");
+	printf("//                                                           \n");
+	printf("//    E-mail: clientemuitoclient@ufrn.edu.br                 \n");
+	printf("//    Telefone: 997451224                                    \n");
+	printf("//    CPF: 52423419811                                       \n");
+	printf("//    Tipo de Cabelo: Ondulado moreno                        \n");
+	printf("//                                                           \n");
+	printf("/////////////////////////////////////////////////////////////\n");
 }
