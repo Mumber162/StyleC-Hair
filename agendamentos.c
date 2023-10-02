@@ -51,34 +51,61 @@ void menuAgendamentos(void)
 // OPÇÕES -======
 void telaCadastro_agend(void)
 {
-	printf("\n\n");
-    printf("::===================================================::\n");
-	printf("::                                                   ::\n");
-	printf("::    - - - ---  CADASTRAR AGENDAMENTO --- - - -     ::\n");
-	printf("::                                                   ::\n");
-	printf("::    Data (dd mm aaaa):                             ::\n");
-	printf("::    Hora (--h--):                                  ::\n");
-	printf("::    Preco (RR.cc):                                 ::\n");
-	printf("::    Servico (foreign key):                         ::\n");
-	printf("::    Cliente (foreign key):                         ::\n");
-	printf("::    Funcionario que fara o servico (foreign key):  ::\n");
-	printf("::                                                   ::\n");
-	printf("::    Codigo do Agendamento:                         ::\n");
-	printf("::    0 - (Voltar)                                   ::\n");
-	
-	int back;
-	scanf("%d", &back);
-	if (back==0) { return; }
+	int res=5;
+	while (res!=0) {
 
+		printf("\n\n");
+		printf("::=============================================::\n");
+		printf("::                                             ::\n");
+		printf("::     - ---  CADASTRAR AGENDAMENTO --- -      ::\n");
+		printf("::                                             ::\n");
+		printf("::    Data (dd mm aaaa):                       ::\n");
+		printf("::    Hora (--h--):                            ::\n");
+		printf("::    Preco (RR.cc):                           ::\n");
+		printf("::    Servico (foreign key):                   ::\n");
+		printf("::    Cliente (foreign key):                   ::\n");
+		printf("::    Funcionario do servico (foreign key):    ::\n");
+		printf("::                                             ::\n");
+		printf("::    Cod. do Agendamento:                     ::\n");
+		printf("::                      _ _ _ _ _ _ _ _ _ _ _  ::\n");
+		printf("::    1 - Prosseguir   |                       ::\n");
+		printf("::    0 - (Voltar)     | Resp.: ");
+		scanf("%d", &res);
+
+		switch (res)
+		{
+			int dd, mm, aaaa;
+			char hora;
+			float preco;
+			char telAgend[12];
+			int codAgend;
+
+			case 1:
+				printf("# - Data (dd mm aaaa):                       ::\n");
+				printf("# - Hora (--h--):                            ::\n");
+				printf("# - Preco (RR.cc):                           ::\n");
+				printf("# - Servico (foreign key):                   ::\n");
+				printf("# - Cliente (foreign key):                   ::\n");
+				printf("# - Funcionario do servico (foreign key):    ::\n");
+				printf("# - Cod. do Agendamento:                     ::\n");
+				break;
+
+			default:
+
+				break;
+		}
+	}
+
+	return;
 }
 
 void telaPesquisa_agend(void)
 {
-	printf("\n\n\n");
-    printf("::===================================================::\n");
-	printf("::                                                   ::\n");
-	printf("::    - - - ---  PESQUISAR AGENDAMENTO --- - - -     ::\n");
-	printf("::                                                   ::\n");
+	printf("\n\n");
+    printf("::=============================================::\n");
+	printf("::                                             ::\n");
+	printf("::     - ---  PESQUISAR AGENDAMENTO --- -      ::\n");
+	printf("::                                             ::\n");
 	printf("::    Digite o Codigo do Agend.:    \n");
 	printf("::                                  \n");
 	printf("::    0 - (Voltar)                  \n");
@@ -91,7 +118,7 @@ void telaPesquisa_agend(void)
 
 void telaAtualiza_agend(void)
 {
-	printf("\n\n\n");
+	printf("\n\n");
     printf("::===================================================::\n");
 	printf("::                                                   ::\n");
 	printf("::    - - - ---  ATUALIZAR AGENDAMENTO --- - - -     ::\n");

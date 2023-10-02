@@ -78,6 +78,7 @@ void telaCadastro_func(void)
 			char nome[20];
 			char email[40];
 
+			// lerCPF(cpf);
 			do {
 				printf("# - CPF do Funcionario   :");
 				scanf("%c", cpf);
@@ -97,30 +98,35 @@ void telaCadastro_func(void)
 		}
 	
 	}
+	return;
 
 }
 
 void telaPesquisa_func(void)
 {
-	printf("\n\n");
-    printf("::=============================================::\n");
-	printf("::                                             ::\n");
-	printf("::     - ---  PESQUISAR Funcionarios --- -     ::\n");
-	printf("::                                             ::\n");
-	printf("::    Digite o Codigo ID:    \n");
-	printf("::                           \n");
-	printf("::    1 - Prosseguir         \n");
-	printf("::    0 - (Voltar)           \n");
-	
-	int back;
-	scanf("%d", &back);
-	if (back==0) { return; }
+	int res;
+	do {
 
+		printf("\n\n");
+		printf("::=============================================::\n");
+		printf("::                                             ::\n");
+		printf("::     - ---  PESQUISAR Funcionarios --- -     ::\n");
+		printf("::                                             ::\n");
+		printf("::    Digite o Codigo ID:    \n");
+		printf("::                           \n");
+		printf("::    1 - Prosseguir         \n");
+		printf("::    0 - (Voltar)           \n");
+
+		scanf("%d", &res);
+		
+	} while (res!=0);
+	
+	return;
 }
 
 void telaAtualiza_func(void)
 {
-	printf("\n\n\n");
+	printf("\n\n");
     printf("::===================================================::\n");
 	printf("::                                                   ::\n");
 	printf("::    - - - ---  ATUALIZAR Funcionarios --- - - -    ::\n");
@@ -138,7 +144,7 @@ void telaAtualiza_func(void)
 
 void telaExclui_func(void)
 {
-	printf("\n\n\n");
+	printf("\n\n");
     printf("::===================================================::\n");
 	printf("::                                                   ::\n");
 	printf("::    - - - - ---  EXCLUIR Funcionarios --- - - -    ::\n");

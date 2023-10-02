@@ -1,7 +1,24 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "util.h"
 
+// ====== LEITURAS -----------
+void lerCPF(char *cpf)
+{
+    printf("");
+}
+
+void lerNome(char *nome)
+{
+    printf("");
+}
+void lerEmail(char *email)
+{
+    printf("");
+}
+
+// ======= VALIDAÇÕES -----------
 int validaCPF(char *cpf)
 {
     // se tem 11 dígitos

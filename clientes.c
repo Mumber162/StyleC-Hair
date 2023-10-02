@@ -51,59 +51,80 @@ void menuClientes(void)
 // OPÇÕES -======
 void telaCadastro_cliente(void)
 {
-	char nome[30];
-	char cpf[12];
-	char email[40];
-	char tel[12];
-	printf("\n\n\n");
-    printf("::===================================================::\n");
-	printf("::                                                   ::\n");
-	printf("::    - - - - ---  CADASTRAR CLIENTES --- - - - -    ::\n");
-	printf("::                                                   ::\n");
-	printf("::    CPF do Cliente:     \n");
-	printf("::    Nome do Cliente:    \n");
-	printf("::    E-mail do Cliente:  \n");
-	printf("::    Num. Telefone:      \n");
-	printf("::    Tipo de Cabelo:     \n");
-	printf("::                        \n");
-	printf("::    1 - Prosseguir      \n");
-	printf("::    0 - (Voltar)        \n");
-	
-	int back;
-	scanf("%d", &back);
-	if (back==0) { return; }
-	
+	int res=5;
+	while (res!=0)
+	{
+		char nomeCliente[30];
+		char cpfCliente[12];
+		char emailCliente[40];
+		char telCliente[12];
+		char tipoCabelo[25];
+
+		printf("\n\n");
+		printf("::=============================================::\n");
+		printf("::                                             ::\n");
+		printf("::     - - ---  CADASTRAR CLIENTES --- - -     ::\n");
+		printf("::                                             ::\n");
+		printf("::    CPF do Cliente:                          ::\n");
+		printf("::    Nome do Cliente:                         ::\n");
+		printf("::    E-mail do Cliente:                       ::\n");
+		printf("::    Num. Telefone:                           ::\n");
+		printf("::    Tipo de Cabelo:                          ::\n");
+		printf("::                      _ _ _ _ _ _ _ _ _ _ _  ::\n");
+		printf("::    1 - Prosseguir   |                       ::\n");
+		printf("::    0 - (Voltar)     | Resp.: ");
+		scanf("%d", &res);
+
+		switch (res)
+		{
+		case 1:
+			printf("# - CPF do Cliente    :");
+			printf("# - Nome do Cliente   :");
+			printf("# - E-mail do Cliente :");
+			printf("# - Num. Telefone     :");
+			printf("# - Tipo de Cabelo    :");
+			break;
+		
+		default:
+			printf("\n-- Nao ha ou nao eh permitido essa opcao. --\n");
+			break;
+		}
+	}
+	return;
 }
 
 void telaPesquisa_cliente(void)
 {
-	printf("\n\n\n");
-    printf("::===================================================::\n");
-	printf("::                                                   ::\n");
-	printf("::    - - - - ---  PESQUISAR CLIENTES --- - - - -    ::\n");
-	printf("::                                                   ::\n");
-	printf("::    Digite o CPF:    \n");
-	printf("::                     \n");
-	printf("::    1 - Prosseguir   \n");
-	printf("::    0 - (Voltar)     \n");
+	int res;
+	do {
+		printf("\n\n");
+		printf("::=============================================::\n");
+		printf("::                                             ::\n");
+		printf("::     - - ---  PESQUISAR CLIENTES --- - -     ::\n");
+		printf("::                                             ::\n");
+		printf("::    Digite o CPF:                            ::\n");
+		printf("::                                             ::\n");
+		printf("::    1 - Prosseguir                           ::\n");
+		printf("::    0 - (Voltar)                             ::\n");
+		scanf("%d", &res);
 
-	int back;
-	scanf("%d", &back);
-	if (back==0) { return; }
-
+		
+	} while (res!=0);
+	
+	return;
 }
 
 void telaAtualiza_cliente(void)
 {
-	printf("\n\n\n");
-    printf("::===================================================::\n");
-	printf("::                                                   ::\n");
-	printf("::    - - - - ---  ATUALIZAR CLIENTES --- - - - -    ::\n");
-	printf("::                                                   ::\n");
-	printf("::    Digite o CPF:    \n");
-	printf("::                     \n");
-	printf("::    1 - Prosseguir   \n");
-	printf("::    0 - (Voltar)     \n");
+	printf("\n\n");
+    printf("::=============================================::\n");
+	printf("::                                             ::\n");
+	printf("::     - - ---  ATUALIZAR CLIENTES --- - -     ::\n");
+	printf("::                                             ::\n");
+	printf("::    Digite o CPF:                            ::\n");
+	printf("::                                             ::\n");
+	printf("::    1 - Prosseguir                           ::\n");
+	printf("::    0 - (Voltar)                             ::\n");
 
 	int back;
 	scanf("%d", &back);
@@ -112,15 +133,15 @@ void telaAtualiza_cliente(void)
 
 void telaExclui_cliente(void)
 {
-	printf("\n\n\n");
-    printf("::===================================================::\n");
-	printf("::                                                   ::\n");
-	printf("::    - - - - ---  EXCLUIR CLIENTES --- - - - -      ::\n");
-	printf("::                                                   ::\n");
-	printf("::    Digite o CPF:    \n");
-	printf("::                     \n");
-	printf("::    1 - Prosseguir   \n");
-	printf("::    0 - (Voltar)     \n");
+	printf("\n\n");
+    printf("::=============================================::\n");
+	printf("::                                             ::\n");
+	printf("::     - - ---  EXCLUIR CLIENTES --- - -       ::\n");
+	printf("::                                             ::\n");
+	printf("::    Digite o CPF:                            ::\n");
+	printf("::                                             ::\n");
+	printf("::    1 - Prosseguir                           ::\n");
+	printf("::    0 - (Voltar)                             ::\n");
 
 	int back;
 	scanf("%d", &back);

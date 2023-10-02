@@ -51,43 +51,65 @@ void menuServicos(void)
 // OPÇÕES -======
 void telaCadastro_serv(void)
 {
-	printf("\n\n\n");
-    printf("::===================================================::\n");
-	printf("::                                                   ::\n");
-	printf("::    - - - - ---  CADASTRAR SERVICOS --- - - - -    ::\n");
-	printf("::                                                   ::\n");
-	printf("::    Tipo de Servico:                     \n");
-	printf("::    Duracao media de Servico (em min):   \n");
-	printf("::    Codigo do Servico:                   \n");
-	printf("::                                         \n");
-	printf("::    0 - (Voltar)                         \n");
-	
-	int back;
-	scanf("%d", &back);
-	if (back==0) { return; }
+	int res=5;
+	while (res!=1) {
 
+		printf("\n\n");
+		printf("::=============================================::\n");
+		printf("::                                             ::\n");
+		printf("::     - - ---  CADASTRAR SERVICOS --- - -     ::\n");
+		printf("::                                             ::\n");
+		printf("::    Tipo de Servico:                         ::\n");
+		printf("::    Duracao media de Servico (em min):       ::\n");
+		printf("::    Codigo do Servico:                       ::\n");
+		printf("::                                             ::\n");
+		printf("::    0 - (Voltar)                             ::\n");
+		scanf("%d", &res);
+
+		switch (res)
+		{
+		case 1:
+
+			char tipoServico[15];
+			int duracaoServico;
+			int codServico;
+
+			printf("# - Tipo de Servico                   : ");
+			printf("# - Duracao media de Servico (em min) : ");
+			printf("# - Codigo do Servico                 : ");
+
+			break;
+
+		default:
+			printf("\n-- Nao ha ou nao eh permitido essa opcao. --\n");
+			break;
+		}
+	}
+	return;
 }
 
 void telaPesquisa_serv(void)
 {
-	printf("\n\n\n");
-    printf("::===================================================::\n");
-	printf("::                                                   ::\n");
-	printf("::    - - - - ---  PESQUISAR SERVICOS --- - - - -    ::\n");
-	printf("::                                                   ::\n");
-	printf("::    Codigo do Servico:    \n");
-	printf("::                          \n");
-	printf("::    0 - (Voltar)          \n");
-	
-	int back;
-	scanf("%d", &back);
-	if (back==0) { return; }
+	int res;
+	do {
+		printf("\n\n");
+		printf("::=============================================::\n");
+		printf("::                                             ::\n");
+		printf("::     - - ---  PESQUISAR SERVICOS --- - -     ::\n");
+		printf("::                                             ::\n");
+		printf("::    Codigo do Servico:    \n");
+		printf("::                          \n");
+		printf("::    0 - (Voltar)          \n");
+		
+		scanf("%d", &res);
+		if (res==0) { return; }
+	} while (res!=0);
 
 }
 
 void telaAtualiza_serv(void)
 {
-	printf("\n\n\n");
+	printf("\n\n");
     printf("::===================================================::\n");
 	printf("::                                                   ::\n");
 	printf("::    - - - - ---  ATUALIZAR SERVICOS --- - - - -    ::\n");
@@ -104,7 +126,7 @@ void telaAtualiza_serv(void)
 
 void telaExclui_serv(void)
 {
-	printf("\n\n\n");
+	printf("\n\n");
     printf("::===================================================::\n");
 	printf("::                                                   ::\n");
 	printf("::    - - - - ---  EXCLUIR SERVICOS --- - - - -      ::\n");
