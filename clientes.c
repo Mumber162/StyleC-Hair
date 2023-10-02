@@ -66,6 +66,7 @@ void telaCadastro_cliente(void)
 	printf("::    Num. Telefone:      \n");
 	printf("::    Tipo de Cabelo:     \n");
 	printf("::                        \n");
+	printf("::    1 - Prosseguir      \n");
 	printf("::    0 - (Voltar)        \n");
 	
 	int back;
@@ -83,6 +84,7 @@ void telaPesquisa_cliente(void)
 	printf("::                                                   ::\n");
 	printf("::    Digite o CPF:    \n");
 	printf("::                     \n");
+	printf("::    1 - Prosseguir   \n");
 	printf("::    0 - (Voltar)     \n");
 
 	int back;
@@ -100,6 +102,7 @@ void telaAtualiza_cliente(void)
 	printf("::                                                   ::\n");
 	printf("::    Digite o CPF:    \n");
 	printf("::                     \n");
+	printf("::    1 - Prosseguir   \n");
 	printf("::    0 - (Voltar)     \n");
 
 	int back;
@@ -116,6 +119,7 @@ void telaExclui_cliente(void)
 	printf("::                                                   ::\n");
 	printf("::    Digite o CPF:    \n");
 	printf("::                     \n");
+	printf("::    1 - Prosseguir   \n");
 	printf("::    0 - (Voltar)     \n");
 
 	int back;

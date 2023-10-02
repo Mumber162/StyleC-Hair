@@ -2,7 +2,9 @@
 #define UTIL_H
 
 //- Assinatura das Funções -------
-// bool validarNome(const char *nome);
+int validaCPF(char *cpf);
+int validaData(int d, int m, int a);
+int bissexto(int ano);
 //-----------------------------
 
 #endif

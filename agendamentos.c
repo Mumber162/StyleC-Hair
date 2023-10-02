@@ -51,20 +51,20 @@ void menuAgendamentos(void)
 // OPÇÕES -======
 void telaCadastro_agend(void)
 {
-	printf("\n\n\n");
+	printf("\n\n");
     printf("::===================================================::\n");
 	printf("::                                                   ::\n");
 	printf("::    - - - ---  CADASTRAR AGENDAMENTO --- - - -     ::\n");
 	printf("::                                                   ::\n");
-	printf("::    Data (dd/mm/aaaa):                             \n");
-	printf("::    Hora (--h--):                                  \n");
-	printf("::    Preco (RR.cc):                                 \n");
-	printf("::    Servico (foreign key):                         \n");
-	printf("::    Cliente (foreign key):                         \n");
-	printf("::    Funcionario que fara o servico (foreign key):  \n");
-	printf("::                                                   \n");
-	printf("::    Codigo do Agendamento:                         \n");
-	printf("::    0 - (Voltar)                                   \n");
+	printf("::    Data (dd mm aaaa):                             ::\n");
+	printf("::    Hora (--h--):                                  ::\n");
+	printf("::    Preco (RR.cc):                                 ::\n");
+	printf("::    Servico (foreign key):                         ::\n");
+	printf("::    Cliente (foreign key):                         ::\n");
+	printf("::    Funcionario que fara o servico (foreign key):  ::\n");
+	printf("::                                                   ::\n");
+	printf("::    Codigo do Agendamento:                         ::\n");
+	printf("::    0 - (Voltar)                                   ::\n");
 	
 	int back;
 	scanf("%d", &back);

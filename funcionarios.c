@@ -5,7 +5,7 @@
 
 void menuFuncionarios(void)
 {
-	int opt = 1;
+	int opt=1;
 	while (opt!=0)
 	{
 		system("@cls||clear");
@@ -51,35 +51,65 @@ void menuFuncionarios(void)
 // OPÇÕES -======
 void telaCadastro_func(void)
 {
-	printf("\n\n\n");
-    printf("::===================================================::\n");
-	printf("::                                                   ::\n");
-	printf("::    - - - ---  CADASTRAR Funcionarios --- - - -    ::\n");
-	printf("::                                                   ::\n");
-	printf("::    CPF do Funcionario:     \n");
-	printf("::    Nome do Funcionario:    \n");
-	printf("::    Email do Funcionario:   \n");
-	printf("::    Num. Telefone:          \n");
-	printf("::    Cargo:                  \n");
-	printf("::    Codigo para ID:         \n");
-	printf("::                            \n");
-	printf("::    0 - (Voltar)            \n");
+	int res=5;
+	while (res!=0)
+	{
+		printf("\n\n");
+		printf("::=============================================::\n");
+		printf("::                                             ::\n");
+		printf("::     - ---  CADASTRAR Funcionarios --- -     ::\n");
+		printf("::                                             ::\n");
+		printf("::    CPF do Funcionario:                      ::\n");
+		printf("::    Nome do Funcionario:                     ::\n");
+		printf("::    Email do Funcionario:                    ::\n");
+		printf("::    Num. Telefone:                           ::\n");
+		printf("::    Cargo:                                   ::\n");
+		printf("::    Codigo para ID:                          ::\n");
+		printf("::                      _ _ _ _ _ _ _ _ _ _ _  ::\n");
+		printf("::    1 - Prosseguir   |                       ::\n");
+		printf("::    0 - (Voltar)     | Resp.: ");
+		scanf("%d", &res);
+
+		switch (res)
+		{
+		case 1:
+
+			char cpf[11];
+			char nome[20];
+			char email[40];
+
+			do {
+				printf("# - CPF do Funcionario   :");
+				scanf("%c", cpf);
+			} while (validaCPF(cpf));
+
+			printf("# - Nome do Funcionario  :");
+			printf("# - Email do Funcionario :");
+			printf("# - Num. Telefone        :");
+			printf("# - Cargo                :");
+			printf("# - Codigo para ID       :");	
+
+		break;
+
+		default:
+			printf("\n-- Nao ha ou nao eh permitido essa opcao. --\n");
+			break;
+		}
 	
-	int back;
-	scanf("%d", &back);
-	if (back==0) { return; }
+	}
 
 }
 
 void telaPesquisa_func(void)
 {
-	printf("\n\n\n");
-    printf("::===================================================::\n");
-	printf("::                                                   ::\n");
-	printf("::    - - - ---  PESQUISAR Funcionarios --- - - -    ::\n");
-	printf("::                                                   ::\n");
+	printf("\n\n");
+    printf("::=============================================::\n");
+	printf("::                                             ::\n");
+	printf("::     - ---  PESQUISAR Funcionarios --- -     ::\n");
+	printf("::                                             ::\n");
 	printf("::    Digite o Codigo ID:    \n");
 	printf("::                           \n");
+	printf("::    1 - Prosseguir         \n");
 	printf("::    0 - (Voltar)           \n");
 	
 	int back;
@@ -97,6 +127,7 @@ void telaAtualiza_func(void)
 	printf("::                                                   ::\n");
 	printf("::    Digite o Codigo ID:    \n");
 	printf("::                           \n");
+	printf("::    1 - Prosseguir         \n");
 	printf("::    0 - (Voltar)           \n");
 	
 	int back;
@@ -114,6 +145,7 @@ void telaExclui_func(void)
 	printf("::                                                   ::\n");
 	printf("::    Digite o Codigo ID:    \n");
 	printf("::                           \n");
+	printf("::    1 - Prosseguir         \n");
 	printf("::    0 - (Voltar)           \n");
 	
 	int back;
