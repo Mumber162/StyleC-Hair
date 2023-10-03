@@ -1,11 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>
 #include "main.h"
 #include "clientes.h"
 #include "funcionarios.h"
 #include "agendamentos.h"
 #include "servicos.h"
 #include "util.h"
+
+// Variável de escolha global
+char pick;
 
 void info()
 {
@@ -20,44 +24,42 @@ void info()
 // PROGRAMA PRINCIPAL
 int main()
 {
-	int opcao = 1;
-	while (opcao!=0)
-	{
+	do {
 		menuPrincipal();
-		scanf("%d", &opcao);
+		scanf("%c", &pick); getchar();
 
-		switch (opcao)
+		switch (pick)
 		{
-		case 1:
+		case '1':
 			menuClientes();
 			break;
-		case 2:
+		case '2':
 			menuAgendamentos();
 			break;
-		case 3:
+		case '3':
 			menuFuncionarios();
 			break;
-		case 4:
+		case '4':
 			menuServicos();
 			break;
-		case 5:
+		case '5':
 			relatorios();
 			break;
-		case 6:
+		case '6':
 			telaSobre();
 			break;
-		case 7:
+		case '7':
 			telaEquipe();
 			break;
-		case 0:
-			printf("Ate a proxima!");
+		case '0':
+			printf("Ate a proxima! :)");
 			break;
 		default:
-			printf("Opcao invalida, tente novamente...");
+			printf("### Opcao invalida, tente novamente... ###\n");
+			sleep(3);
 			break;
 		}
-	}
-	printf("\n");
+	} while (pick!='0');
 
 	return 0;
 }
@@ -66,7 +68,6 @@ int main()
 void menuPrincipal(void)
 {
 	info();
-	int opcao;
 	printf("/////////////////////////////////////////////////////////////\n");
 	printf("//                                                         //\n");
 	printf("//   ---------------------------------------------------   //\n");

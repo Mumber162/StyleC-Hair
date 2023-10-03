@@ -70,7 +70,8 @@ int validaCPF(char *cpf)
 }
 
 int validaData(int d, int m, int a)
-{
+{ //Adaptação do código de @flaviusgorgonio
+
     int maiorDia;
 
     // Casos padrões
