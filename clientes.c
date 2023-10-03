@@ -3,11 +3,12 @@
 #include "clientes.h"
 #include "util.h"
 
+// Var global
+char pickClient;
+
 void menuClientes(void)
 {
-	int opt = 1;
-	while (opt!=0)
-	{
+	do {
 		system("@cls||clear");
 		printf("/////////////////////////////////////////////////////////////\n");
 		printf("//                                                         //\n");
@@ -22,38 +23,35 @@ void menuClientes(void)
 		printf("/////////////////////////////////////////////////////////////\n");
 		printf("//                                                         //\n");
 		printf("//     Digite a escolha desejada: ");
-		scanf("%d", &opt);
+		scanf("%1s", &pickClient); getchar();
 
-		switch (opt)
-		{
-		case 1:
+		switch (pickClient) {
+		case '1':
 			telaCadastro_cliente();
 			break;
-		case 2:
+		case '2':
 			telaPesquisa_cliente();
 			break;
-		case 3:
+		case '3':
 			telaAtualiza_cliente();
 			break;
-		case 4:
+		case '4':
 			telaExclui_cliente();
 			break;
-		case 0:
+		case '0':
 			return;
 		
 		default:
 			printf("Opcao invalida, tente novamente...");
 			break;
 		}
-	}
+	} while (pickClient!='0');
 }
 
 // OPÇÕES -======
 void telaCadastro_cliente(void)
 {
-	int res=5;
-	while (res!=0)
-	{
+	do {
 		char nomeCliente[30];
 		char cpfCliente[12];
 		char emailCliente[40];
@@ -70,14 +68,16 @@ void telaCadastro_cliente(void)
 		printf("::    E-mail do Cliente:                       ::\n");
 		printf("::    Num. Telefone:                           ::\n");
 		printf("::    Tipo de Cabelo:                          ::\n");
-		printf("::                      _ _ _ _ _ _ _ _ _ _ _  ::\n");
+		printf("::                      _   _   _   _   _   _  ::\n");
 		printf("::    1 - Prosseguir   |                       ::\n");
 		printf("::    0 - (Voltar)     | Resp.: ");
-		scanf("%d", &res);
+		scanf("%1s", &pickClient); getchar();
 
-		switch (res)
-		{
-		case 1:
+		switch (pickClient) {
+		case '0':
+			break;
+		
+		case '1':
 			printf("# - CPF do Cliente    :");
 			printf("# - Nome do Cliente   :");
 			printf("# - E-mail do Cliente :");
@@ -89,13 +89,13 @@ void telaCadastro_cliente(void)
 			printf("\n-- Nao ha ou nao eh permitido essa opcao. --\n");
 			break;
 		}
-	}
+	} while (pickClient!='0');
+
 	return;
 }
 
 void telaPesquisa_cliente(void)
 {
-	int res;
 	do {
 		printf("\n\n");
 		printf("::=============================================::\n");
@@ -103,49 +103,88 @@ void telaPesquisa_cliente(void)
 		printf("::     - - ---  PESQUISAR CLIENTES --- - -     ::\n");
 		printf("::                                             ::\n");
 		printf("::    Digite o CPF:                            ::\n");
-		printf("::                                             ::\n");
-		printf("::    1 - Prosseguir                           ::\n");
-		printf("::    0 - (Voltar)                             ::\n");
-		scanf("%d", &res);
+		printf("::                      _   _   _   _   _   _  ::\n");
+		printf("::    1 - Prosseguir   |                       ::\n");
+		printf("::    0 - (Voltar)     | Resp.: ");
+		scanf("%1s", &pickClient); getchar();
 
+		switch (pickClient) {
+		case '0':
+			break;
 		
-	} while (res!=0);
+		case '1':
+			printf("# - CPF do Cliente    :");
+			break;
+		
+		default:
+			printf("\n-- Nao ha ou nao eh permitido essa opcao. --\n");
+			break;
+		}
+
+	} while (pickClient!='0');
 	
 	return;
 }
 
 void telaAtualiza_cliente(void)
 {
-	printf("\n\n");
-    printf("::=============================================::\n");
-	printf("::                                             ::\n");
-	printf("::     - - ---  ATUALIZAR CLIENTES --- - -     ::\n");
-	printf("::                                             ::\n");
-	printf("::    Digite o CPF:                            ::\n");
-	printf("::                                             ::\n");
-	printf("::    1 - Prosseguir                           ::\n");
-	printf("::    0 - (Voltar)                             ::\n");
-
-	int back;
-	scanf("%d", &back);
-	if (back==0) { return; }
+	do {
+		printf("\n\n");
+		printf("::=============================================::\n");
+		printf("::                                             ::\n");
+		printf("::     - - ---  ATUALIZAR CLIENTES --- - -     ::\n");
+		printf("::                                             ::\n");
+		printf("::    Digite o CPF:                            ::\n");
+		printf("::                      _   _   _   _   _   _  ::\n");
+		printf("::    1 - Prosseguir   |                       ::\n");
+		printf("::    0 - (Voltar)     | Resp.: ");
+		scanf("%1s", &pickClient); getchar();
+		
+		switch (pickClient) {
+		case '0':
+			break;
+		
+		case '1':
+			printf("# - CPF do Cliente    :");
+			break;
+		
+		default:
+			printf("\n-- Nao ha ou nao eh permitido essa opcao. --\n");
+			break;
+		}
+	} while (pickClient!='0');
 }
 
 void telaExclui_cliente(void)
 {
-	printf("\n\n");
-    printf("::=============================================::\n");
-	printf("::                                             ::\n");
-	printf("::     - - ---  EXCLUIR CLIENTES --- - -       ::\n");
-	printf("::                                             ::\n");
-	printf("::    Digite o CPF:                            ::\n");
-	printf("::                                             ::\n");
-	printf("::    1 - Prosseguir                           ::\n");
-	printf("::    0 - (Voltar)                             ::\n");
+	do {
+		printf("\n\n");
+		printf("::=============================================::\n");
+		printf("::                                             ::\n");
+		printf("::     - - ---  EXCLUIR CLIENTES --- - -       ::\n");
+		printf("::                                             ::\n");
+		printf("::    Digite o CPF:                            ::\n");
+		printf("::                      _   _   _   _   _   _  ::\n");
+		printf("::    1 - Prosseguir   |                       ::\n");
+		printf("::    0 - (Voltar)     | Resp.: ");
+		scanf("%1s", &pickClient); getchar();
 
-	int back;
-	scanf("%d", &back);
-	if (back==0) { return; }
+		switch (pickClient) {
+		case '0':
+			break;
+		
+		case '1':
+			printf("# - CPF do Cliente    :");
+			break;
+		
+		default:
+			printf("\n-- Nao ha ou nao eh permitido essa opcao. --\n");
+			break;
+		}
+
+	} while (pickClient!='0');
+
+	return;
 }
 
 void telaExibe_cliente(void)

@@ -2,13 +2,13 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include "main.h"
+#include "util.h"
 #include "clientes.h"
 #include "funcionarios.h"
 #include "agendamentos.h"
 #include "servicos.h"
-#include "util.h"
 
-// Variável de escolha global
+// Variável de escolha global //
 char pick;
 
 void info()
@@ -26,7 +26,7 @@ int main()
 {
 	do {
 		menuPrincipal();
-		scanf("%c", &pick); getchar();
+		scanf("%1s", &pick); getchar();
 
 		switch (pick)
 		{

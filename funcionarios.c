@@ -3,11 +3,12 @@
 #include "funcionarios.h"
 #include "util.h"
 
+// Var global
+char pickFunc;
+
 void menuFuncionarios(void)
 {
-	int opt=1;
-	while (opt!=0)
-	{
+	do {
 		system("@cls||clear");
 		printf("/////////////////////////////////////////////////////////////\n");
 		printf("//                                                         //\n");
@@ -22,38 +23,37 @@ void menuFuncionarios(void)
 		printf("/////////////////////////////////////////////////////////////\n");
 		printf("//                                                         //\n");
 		printf("//     Digite a escolha desejada: ");
-		scanf("%d", &opt);
+		scanf("%1s", &pickFunc); getchar();
 
-		switch (opt)
-		{
-		case 1:
+		switch (pickFunc) {
+		case '1':
 			telaCadastro_func();
 			break;
-		case 2:
+		case '2':
 			telaPesquisa_func();
 			break;
-		case 3:
+		case '3':
 			telaAtualiza_func();
 			break;
-		case 4:
+		case '4':
 			telaExclui_func();
 			break;
-		case 0:
+		case '0':
 			return;
 		
 		default:
-			printf("Opcao invalida, tente novamente...");
+			printf("### ! Opcao invalida, tente novamente... ! ###");
 			break;
 		}
-	}
+	} while (pickFunc!='0');
+
+	return;
 }
 
 // OPÇÕES -======
 void telaCadastro_func(void)
 {
-	int res=5;
-	while (res!=0)
-	{
+	do {
 		printf("\n\n");
 		printf("::=============================================::\n");
 		printf("::                                             ::\n");
@@ -65,14 +65,16 @@ void telaCadastro_func(void)
 		printf("::    Num. Telefone:                           ::\n");
 		printf("::    Cargo:                                   ::\n");
 		printf("::    Codigo para ID:                          ::\n");
-		printf("::                      _ _ _ _ _ _ _ _ _ _ _  ::\n");
+		printf("::                      _   _   _   _   _   _  ::\n");
 		printf("::    1 - Prosseguir   |                       ::\n");
 		printf("::    0 - (Voltar)     | Resp.: ");
-		scanf("%d", &res);
+		scanf("%1s", &pickFunc); getchar();
 
-		switch (res)
-		{
-		case 1:
+		switch (pickFunc) {
+		case '0':
+			break;
+
+		case '1':
 
 			char cpf[11];
 			char nome[20];
@@ -81,7 +83,7 @@ void telaCadastro_func(void)
 			// lerCPF(cpf);
 			do {
 				printf("# - CPF do Funcionario   :");
-				scanf("%c", cpf);
+				scanf("%[0-9]", cpf); getchar();
 			} while (validaCPF(cpf));
 
 			printf("# - Nome do Funcionario  :");
@@ -90,74 +92,110 @@ void telaCadastro_func(void)
 			printf("# - Cargo                :");
 			printf("# - Codigo para ID       :");	
 
-		break;
+			break;
 
 		default:
-			printf("\n-- Nao ha ou nao eh permitido essa opcao. --\n");
+			printf("\n### - ! Nao ha ou nao eh permitido essa opcao. ! ###\n");
 			break;
 		}
 	
-	}
-	return;
+	} while (pickFunc!='0');
 
+	return;
 }
 
 void telaPesquisa_func(void)
 {
-	int res;
 	do {
-
 		printf("\n\n");
 		printf("::=============================================::\n");
 		printf("::                                             ::\n");
 		printf("::     - ---  PESQUISAR Funcionarios --- -     ::\n");
 		printf("::                                             ::\n");
-		printf("::    Digite o Codigo ID:    \n");
-		printf("::                           \n");
-		printf("::    1 - Prosseguir         \n");
-		printf("::    0 - (Voltar)           \n");
+		printf("::    Digite o Codigo ID:                      ::\n");
+		printf("::                      _   _   _   _   _   _  ::\n");
+		printf("::    1 - Prosseguir   |                       ::\n");
+		printf("::    0 - (Voltar)     | Resp.: ");
+		scanf("%1s", &pickFunc); getchar();
 
-		scanf("%d", &res);
+		switch (pickFunc) {
+		case '0':
+			break;
+
+		case '1':
+			printf("# - Codigo para ID       :");	
+
+			break;
+
+		default:
+			printf("\n### - ! Nao ha ou nao eh permitido essa opcao. ! ###\n");
+			break;
+		}
 		
-	} while (res!=0);
+	} while (pickFunc!='0');
 	
 	return;
 }
 
 void telaAtualiza_func(void)
 {
-	printf("\n\n");
-    printf("::===================================================::\n");
-	printf("::                                                   ::\n");
-	printf("::    - - - ---  ATUALIZAR Funcionarios --- - - -    ::\n");
-	printf("::                                                   ::\n");
-	printf("::    Digite o Codigo ID:    \n");
-	printf("::                           \n");
-	printf("::    1 - Prosseguir         \n");
-	printf("::    0 - (Voltar)           \n");
-	
-	int back;
-	scanf("%d", &back);
-	if (back==0) { return; }
+	do {
+		printf("\n\n");
+		printf("::=============================================::\n");
+		printf("::                                             ::\n");
+		printf("::     - ---  ATUALIZAR Funcionarios --- -     ::\n");
+		printf("::                                             ::\n");
+		printf("::    Digite o Codigo ID:                      ::\n");
+		printf("::                      _   _   _   _   _   _  ::\n");
+		printf("::    1 - Prosseguir   |                       ::\n");
+		printf("::    0 - (Voltar)     | Resp.: ");
+		scanf("%1s", &pickFunc); getchar();
 
+		switch (pickFunc) {
+		case '0':
+			break;
+
+		case '1':
+			printf("# - Codigo para ID       :");	
+			break;
+
+		default:
+			printf("\n### - ! Nao ha ou nao eh permitido essa opcao. ! ###\n");
+			break;
+		}
+	} while (pickFunc!='0');
 }
 
 void telaExclui_func(void)
 {
-	printf("\n\n");
-    printf("::===================================================::\n");
-	printf("::                                                   ::\n");
-	printf("::    - - - - ---  EXCLUIR Funcionarios --- - - -    ::\n");
-	printf("::                                                   ::\n");
-	printf("::    Digite o Codigo ID:    \n");
-	printf("::                           \n");
-	printf("::    1 - Prosseguir         \n");
-	printf("::    0 - (Voltar)           \n");
-	
-	int back;
-	scanf("%d", &back);
-	if (back==0) { return; }
+	do {
+		printf("\n\n");
+		printf("::=============================================::\n");
+		printf("::                                             ::\n");
+		printf("::     - - ---  EXCLUIR Funcionarios --- -     ::\n");
+		printf("::                                             ::\n");
+		printf("::    Digite o Codigo ID:                      ::\n");
+		printf("::                      _   _   _   _   _   _  ::\n");
+		printf("::    1 - Prosseguir   |                       ::\n");
+		printf("::    0 - (Voltar)     | Resp.: ");
+		scanf("%1s", &pickFunc); getchar();
 
+		switch (pickFunc) {
+		case '0':
+			break;
+
+		case '1':
+			printf("# - Codigo para ID       :");	
+			break;
+
+		default:
+			printf("\n### - ! Nao ha ou nao eh permitido essa opcao. ! ###\n");
+			break;
+		}
+
+	} while (pickFunc!='0');
+	
+	return;
 }
 
 void telaExibe_func(void)
