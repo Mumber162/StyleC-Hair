@@ -76,15 +76,15 @@ void telaCadastro_func(void)
 
 		case '1':
 
-			char cpf[11];
+			char cpf[12];
 			char nome[20];
-			char email[40];
+			char email[45];
 
 			// lerCPF(cpf);
 			do {
 				printf("# - CPF do Funcionario   :");
 				scanf("%[0-9]", cpf); getchar();
-			} while (validaCPF(cpf));
+			} while (!(validaCPF(cpf)));
 
 			printf("# - Nome do Funcionario  :");
 			printf("# - Email do Funcionario :");

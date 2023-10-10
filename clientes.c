@@ -52,12 +52,6 @@ void menuClientes(void)
 void telaCadastro_cliente(void)
 {
 	do {
-		char nomeCliente[30];
-		char cpfCliente[12];
-		char emailCliente[40];
-		char telCliente[12];
-		char tipoCabelo[25];
-
 		printf("\n\n");
 		printf("::=============================================::\n");
 		printf("::                                             ::\n");
@@ -78,8 +72,21 @@ void telaCadastro_cliente(void)
 			break;
 		
 		case '1':
-			printf("# - CPF do Cliente    :");
-			printf("# - Nome do Cliente   :");
+			char nomeCliente[30];
+			char cpfCliente[12];
+			char emailCliente[40];
+			char telCliente[12];
+			char tipoCabelo[25];
+
+			do {
+				printf("# - CPF do Cliente    :");
+				scanf("%s", cpfCliente); getchar();
+			} while (!(validaCPF(cpfCliente)));
+			
+			do {
+				printf("# - Nome do Cliente   :");
+			} while (validaNome(nomeCliente));
+
 			printf("# - E-mail do Cliente :");
 			printf("# - Num. Telefone     :");
 			printf("# - Tipo de Cabelo    :");

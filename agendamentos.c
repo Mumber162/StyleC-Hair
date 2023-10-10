@@ -3,11 +3,12 @@
 #include "agendamentos.h"
 #include "util.h"
 
+// Var global
+char pickAgend;
+
 void menuAgendamentos(void)
 {
-	int opt = 1;
-	while (opt!=0)
-	{
+	do {
 		system("@cls||clear");
 		printf("/////////////////////////////////////////////////////////////\n");
 		printf("//                                                         //\n");
@@ -22,38 +23,37 @@ void menuAgendamentos(void)
 		printf("/////////////////////////////////////////////////////////////\n");
 		printf("//                                                         //\n");
 		printf("//     Digite a escolha desejada: ");
-		scanf("%d", &opt);
+		scanf("%1s", &pickAgend); getchar();
 
-		switch (opt)
-		{
-		case 1:
+		switch (pickAgend) {
+		case '1':
 			telaCadastro_agend();
 			break;
-		case 2:
+		case '2':
 			telaPesquisa_agend();
 			break;
-		case 3:
+		case '3':
 			telaAtualiza_agend();
 			break;
-		case 4:
+		case '4':
 			telaExclui_agend();
 			break;
-		case 0:
+		case '0':
 			return;
 		
 		default:
-			printf("Opcao invalida, tente novamente...");
+			printf("### ! Opcao invalida, tente novamente... ! ###");
 			break;
 		}
-	}
+	} while (pickAgend!='0');
+
+	return;
 }
 
 // OPÇÕES -======
 void telaCadastro_agend(void)
 {
-	int res=5;
-	while (res!=0) {
-
+	do {
 		printf("\n\n");
 		printf("::=============================================::\n");
 		printf("::                                             ::\n");
@@ -70,84 +70,133 @@ void telaCadastro_agend(void)
 		printf("::                      _ _ _ _ _ _ _ _ _ _ _  ::\n");
 		printf("::    1 - Prosseguir   |                       ::\n");
 		printf("::    0 - (Voltar)     | Resp.: ");
-		scanf("%d", &res);
+		scanf("%1s", &pickAgend); getchar();
 
-		switch (res)
+		switch (pickAgend)
 		{
-			int dd, mm, aaaa;
-			char hora;
-			float preco;
-			char telAgend[12];
-			int codAgend;
+			case '0':
+				break;
 
-			case 1:
-				printf("# - Data (dd mm aaaa):                       ::\n");
-				printf("# - Hora (--h--):                            ::\n");
-				printf("# - Preco (RR.cc):                           ::\n");
-				printf("# - Servico (foreign key):                   ::\n");
-				printf("# - Cliente (foreign key):                   ::\n");
-				printf("# - Funcionario do servico (foreign key):    ::\n");
-				printf("# - Cod. do Agendamento:                     ::\n");
+			case '1':
+				int dd, mm, aaaa;
+				char hora;
+				float preco;
+				int codAgend;
+
+				printf("# - Data (dd mm aaaa)      : ");
+				printf("# - Hora (--h--)           : ");
+				printf("# - Preco (RR.cc)          : ");
+				printf("# - Servico (foreign key)  : ");
+				printf("# - Cliente (foreign key)  : ");
+				printf("# - Func. do servico (fgn key): ");
+				printf("# - Cod. do Agendamento    : ");
 				break;
 
 			default:
-
+				printf("\n### - ! Nao ha ou nao eh permitido essa opcao. ! ###\n");
 				break;
 		}
-	}
-
+	} while (pickAgend!='0');
+	
 	return;
 }
 
 void telaPesquisa_agend(void)
 {
-	printf("\n\n");
-    printf("::=============================================::\n");
-	printf("::                                             ::\n");
-	printf("::     - ---  PESQUISAR AGENDAMENTO --- -      ::\n");
-	printf("::                                             ::\n");
-	printf("::    Digite o Codigo do Agend.:    \n");
-	printf("::                                  \n");
-	printf("::    0 - (Voltar)                  \n");
-	
-	int back;
-	scanf("%d", &back);
-	if (back==0) { return; }
+	do {
+		printf("\n\n");
+		printf("::=============================================::\n");
+		printf("::                                             ::\n");
+		printf("::     - ---  PESQUISAR AGENDAMENTO --- -      ::\n");
+		printf("::                                             ::\n");
+		printf("::    Digite o Codigo do Agend.:               ::\n");
+		printf("::                      _   _   _   _   _   _  ::\n");
+		printf("::    1 - Prosseguir   |                       ::\n");
+		printf("::    0 - (Voltar)     | Resp.: ");
+		scanf("%1s", &pickAgend); getchar();
 
+		switch (pickAgend)
+		{
+		case '0':
+			break;
+
+		case '1':
+			printf("# - Cod. do Agendamento: ");
+			break;
+
+		default:
+			printf("\n### - ! Nao ha ou nao eh permitido essa opcao. ! ###\n");
+			break;
+		}
+
+	} while (pickAgend!='0');
+
+	return;
 }
 
 void telaAtualiza_agend(void)
 {
-	printf("\n\n");
-    printf("::===================================================::\n");
-	printf("::                                                   ::\n");
-	printf("::    - - - ---  ATUALIZAR AGENDAMENTO --- - - -     ::\n");
-	printf("::                                                   ::\n");
-	printf("::    Digite o Codigo do Agend.:    \n");
-	printf("::                                  \n");
-	printf("::    0 - (Voltar)                  \n");
-	
-	int back;
-	scanf("%d", &back);
-	if (back==0) { return; }
+	do {
 
+		printf("\n\n");
+		printf("::=============================================::\n");
+		printf("::                                             ::\n");
+		printf("::     - ---  ATUALIZAR AGENDAMENTO --- -      ::\n");
+		printf("::                                             ::\n");
+		printf("::    Digite o Codigo do Agend.:               ::\n");
+		printf("::                      _   _   _   _   _   _  ::\n");
+		printf("::    1 - Prosseguir   |                       ::\n");
+		printf("::    0 - (Voltar)     | Resp.: ");
+		scanf("%1s", &pickAgend); getchar();
+
+		switch (pickAgend)
+		{
+		case '0':
+			break;
+
+		case '1':
+			printf("# - Cod. do Agendamento: ");
+			break;
+
+		default:
+			printf("\n### - ! Nao ha ou nao eh permitido essa opcao. ! ###\n");
+			break;
+		}
+
+	} while (pickAgend!='0');
 }
 
 void telaExclui_agend(void)
 {
-	printf("\n\n\n");
-    printf("::==================================================::\n");
-	printf("::                                                  ::\n");
-	printf("::    - - - ---  EXCLUIR AGENDAMENTO --- - - - -    ::\n");
-	printf("::                                                  ::\n");
-	printf("::    Digite o Codigo do Agend.:    \n");
-	printf("::                                  \n");
-	printf("::    0 - (Voltar)                  \n");
-	
-	int back;
-	scanf("%d", &back);
-	if (back==0) { return; }
+	do {
+		printf("\n\n");
+		printf("::=============================================::\n");
+		printf("::                                             ::\n");
+		printf("::    - - ---  EXCLUIR AGENDAMENTO --- - -     ::\n");
+		printf("::                                             ::\n");
+		printf("::    Digite o Codigo do Agend.:               ::\n");
+		printf("::                      _   _   _   _   _   _  ::\n");
+		printf("::    1 - Prosseguir   |                       ::\n");
+		printf("::    0 - (Voltar)     | Resp.: ");
+		scanf("%1s", &pickAgend); getchar();
 
+		switch (pickAgend)
+		{
+		case '0':
+			break;
+
+		case '1':
+			printf("# - Cod. do Agendamento: ");
+			break;
+
+		default:
+			printf("\n### - ! Nao ha ou nao eh permitido essa opcao. ! ###\n");
+			break;
+		}
+
+	} while (pickAgend!='0');
+
+	return;
 }
 
 void telaExibe_agend(void)

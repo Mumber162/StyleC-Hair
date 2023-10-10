@@ -19,7 +19,37 @@ void lerEmail(char *email)
 }
 
 // ======= VALIDAÇÕES -----------
-int validaCPF(char *cpf)
+int ehLetra(char c) { // aplicado com base no código de "Flavius Gorgonio"
+    if (c >= 'A' && c <= 'Z') {
+        return 1;
+    } else if (c >= 'a' && c <= 'z') {
+        return 1;
+    } else {
+        return 0;
+    }
+}
+
+int validaNome(char *nome) // aplicado com base no código de "Flavius Gorgonio"
+{
+    for (int i=0; nome[i]!='\0'; i++) {
+        if (!ehLetra(nome[i])) {
+            return 0;
+        }
+    }
+    return 1;
+}
+
+int ehDigit(char *stringDigit) //adaptado Chat GPT
+{
+    // se todos os caracteres são dígitos
+    for (int i = 0; i < 11; i++) {
+        if (stringDigit[i] < '0' || stringDigit[i] > '9') {
+            printf("\n-- Apenas numeros por favor! --\n");
+            return 0;
+        }
+    }
+}
+int validaCPF(char *cpf) //codigo adaptado do Chat GPT
 {
     // se tem 11 dígitos
     if (strlen(cpf) != 11) {
@@ -27,12 +57,9 @@ int validaCPF(char *cpf)
         return 0;
     }
 
-    // se todos os caracteres são dígitos
-    for (int i = 0; i < 11; i++) {
-        if (cpf[i] < '0' || cpf[i] > '9') {
-            printf("\n-- Apenas numeros por favor! --\n");
-            return 0;
-        }
+    if (!(ehDigit(cpf)))
+    {
+        return 0;
     }
 
     // Calcula o primeiro dígito verificador
