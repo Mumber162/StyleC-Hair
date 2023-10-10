@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <locale.h>
 #include "main.h"
 #include "util.h"
 #include "clientes.h"
@@ -23,6 +24,7 @@ void info()
 // PROGRAMA PRINCIPAL
 int main()
 {
+	setlocale(LC_ALL, "Portuguese");
 	do {
 		menuPrincipal();
 		scanf("%1s", &pick); getchar();

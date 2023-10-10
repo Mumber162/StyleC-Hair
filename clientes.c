@@ -73,11 +73,11 @@ void telaCadastro_cliente(void)
 			break;
 		
 		case '1':
-			char nomeCliente[45];
+			char nomeCliente[100];
 			char cpfCliente[12];
-			char emailCliente[40];
+			char emailCliente[256];
 			char telCliente[12];
-			char tipoCabelo[25];
+			char tipoCabelo[100];
 
 			do {
 				printf("\n# - CPF do Cliente    : ");
@@ -92,6 +92,9 @@ void telaCadastro_cliente(void)
 				fgets(nomeCliente, sizeof(nomeCliente), stdin);
 
 			} while (!(validaNome(nomeCliente)));
+
+			printf("\nSeu NOME eh: %s", nomeCliente);
+			esperar();
 
 			printf("# - E-mail do Cliente :");
 			printf("# - Num. Telefone     :");

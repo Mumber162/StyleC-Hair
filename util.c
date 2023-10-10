@@ -21,23 +21,45 @@ void lerEmail(char *email)
 }
 
 // ======= VALIDAÇÕES -----------
-int ehLetra(char c) { // aplicado com base no código de "Flavius Gorgonio"
-    if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z') || c==' ') {
+int ehLetra(char c) { // adaptado do código de "Flavius Gorgonio"
+    // Validar os acentos
+    char acentos[] = {"ÁÂÃÉÊÍÓÕÔÚÇáâãéêíõóôúç"};
+
+    if ((c >= 'A' && c <= 'Z') ||
+        (c >= 'a' && c <= 'z') ||
+        (c==' ')) {
         return 1;
     } else {
-        return 0;
+        for (int i=0; i<strlen(acentos); i++)
+        {
+            if (c==acentos[i])
+            {
+                return 1;
+            }
+            else {
+                return 0;
+            }
+        }
     }
 }
 
-int validaNome(char *nome) // aplicado com base no código de "Flavius Gorgonio"
+int validaNome(char *nome) // adaptado do código de "Flavius Gorgonio"
 {
-    for (int i=0; i<(strlen(nome)-1); i++) {
-        if (!ehLetra(nome[i]))
-        {
-			printf("\n### ! Use as letras do alfabeto ! ###\n");
-            return 0;
+    if ((strlen(nome)-1)<3)
+    {
+        printf("\n### ! Nome muito pequeno ! ###\n");
+        return 0;
+    } else {
+        for (int i=0; i<(strlen(nome)-1); i++) {
+
+            if (!ehLetra(nome[i]))
+            {
+                printf("\n### ! Use as letras do alfabeto ! ###\n");
+                return 0;
+            }
         }
     }
+
     return 1;
 }
 
