@@ -2,6 +2,11 @@
 #define UTIL_H
 
 //- Assinatura das Funções -------
+void mostraCPF(char *cpf);
+void esperar(void);
+void limpaTela(void);
+void erro1(void);
+
 void lerNome(char *nome);
 void lerCPF(char *cpf);
 void lerEmail(char *email);

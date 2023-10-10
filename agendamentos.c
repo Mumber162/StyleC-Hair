@@ -42,7 +42,8 @@ void menuAgendamentos(void)
 			return;
 		
 		default:
-			printf("### ! Opcao invalida, tente novamente... ! ###");
+			printf("### Opcao invalida, tente novamente... ###\n");
+			esperar();
 			break;
 		}
 	} while (pickAgend!='0');
@@ -67,7 +68,7 @@ void telaCadastro_agend(void)
 		printf("::    Funcionario do servico (foreign key):    ::\n");
 		printf("::                                             ::\n");
 		printf("::    Cod. do Agendamento:                     ::\n");
-		printf("::                      _ _ _ _ _ _ _ _ _ _ _  ::\n");
+		printf("::                       _   _   _   _   _   _ ::\n");
 		printf("::    1 - Prosseguir   |                       ::\n");
 		printf("::    0 - (Voltar)     | Resp.: ");
 		scanf("%1s", &pickAgend); getchar();
@@ -110,7 +111,7 @@ void telaPesquisa_agend(void)
 		printf("::     - ---  PESQUISAR AGENDAMENTO --- -      ::\n");
 		printf("::                                             ::\n");
 		printf("::    Digite o Codigo do Agend.:               ::\n");
-		printf("::                      _   _   _   _   _   _  ::\n");
+		printf("::                       _   _   _   _   _   _ ::\n");
 		printf("::    1 - Prosseguir   |                       ::\n");
 		printf("::    0 - (Voltar)     | Resp.: ");
 		scanf("%1s", &pickAgend); getchar();
@@ -128,7 +129,6 @@ void telaPesquisa_agend(void)
 			printf("\n### - ! Nao ha ou nao eh permitido essa opcao. ! ###\n");
 			break;
 		}
-
 	} while (pickAgend!='0');
 
 	return;
@@ -162,8 +162,9 @@ void telaAtualiza_agend(void)
 			printf("\n### - ! Nao ha ou nao eh permitido essa opcao. ! ###\n");
 			break;
 		}
-
 	} while (pickAgend!='0');
+
+	return;
 }
 
 void telaExclui_agend(void)

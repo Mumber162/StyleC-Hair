@@ -42,7 +42,8 @@ void menuClientes(void)
 			return;
 		
 		default:
-			printf("Opcao invalida, tente novamente...");
+			printf("### Opcao invalida, tente novamente... ###\n");
+			esperar();
 			break;
 		}
 	} while (pickClient!='0');
@@ -72,20 +73,25 @@ void telaCadastro_cliente(void)
 			break;
 		
 		case '1':
-			char nomeCliente[30];
+			char nomeCliente[45];
 			char cpfCliente[12];
 			char emailCliente[40];
 			char telCliente[12];
 			char tipoCabelo[25];
 
 			do {
-				printf("# - CPF do Cliente    :");
+				printf("\n# - CPF do Cliente    : ");
 				scanf("%s", cpfCliente); getchar();
 			} while (!(validaCPF(cpfCliente)));
+
+			printf("\nSeu CPF eh: ");
+			mostraCPF(cpfCliente);
 			
 			do {
-				printf("# - Nome do Cliente   :");
-			} while (validaNome(nomeCliente));
+				printf("\n# - Nome do Cliente   : ");
+				fgets(nomeCliente, sizeof(nomeCliente), stdin);
+
+			} while (!(validaNome(nomeCliente)));
 
 			printf("# - E-mail do Cliente :");
 			printf("# - Num. Telefone     :");
@@ -93,7 +99,7 @@ void telaCadastro_cliente(void)
 			break;
 		
 		default:
-			printf("\n-- Nao ha ou nao eh permitido essa opcao. --\n");
+			erro1();
 			break;
 		}
 	} while (pickClient!='0');
@@ -124,7 +130,7 @@ void telaPesquisa_cliente(void)
 			break;
 		
 		default:
-			printf("\n-- Nao ha ou nao eh permitido essa opcao. --\n");
+			erro1();
 			break;
 		}
 
@@ -156,7 +162,7 @@ void telaAtualiza_cliente(void)
 			break;
 		
 		default:
-			printf("\n-- Nao ha ou nao eh permitido essa opcao. --\n");
+			erro1();
 			break;
 		}
 	} while (pickClient!='0');
@@ -185,7 +191,7 @@ void telaExclui_cliente(void)
 			break;
 		
 		default:
-			printf("\n-- Nao ha ou nao eh permitido essa opcao. --\n");
+			erro1();
 			break;
 		}
 

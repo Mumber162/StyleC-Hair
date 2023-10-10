@@ -42,7 +42,8 @@ void menuFuncionarios(void)
 			return;
 		
 		default:
-			printf("### ! Opcao invalida, tente novamente... ! ###");
+			printf("### Opcao invalida, tente novamente... ###\n");
+			esperar();
 			break;
 		}
 	} while (pickFunc!='0');
@@ -80,7 +81,6 @@ void telaCadastro_func(void)
 			char nome[20];
 			char email[45];
 
-			// lerCPF(cpf);
 			do {
 				printf("# - CPF do Funcionario   :");
 				scanf("%[0-9]", cpf); getchar();

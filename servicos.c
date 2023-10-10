@@ -3,11 +3,12 @@
 #include "servicos.h"
 #include "util.h"
 
+// Var global
+char pickServ;
+
 void menuServicos(void)
 {
-	int opt = 1;
-	while (opt!=0)
-	{
+	do {
 		system("@cls||clear");
 		printf("/////////////////////////////////////////////////////////////\n");
 		printf("//                                                         //\n");
@@ -22,38 +23,38 @@ void menuServicos(void)
 		printf("/////////////////////////////////////////////////////////////\n");
 		printf("//                                                         //\n");
 		printf("//     Digite a escolha desejada: ");
-		scanf("%d", &opt);
+		scanf("%1s", &pickServ); getchar();
 
-		switch (opt)
-		{
-		case 1:
+		switch (pickServ) {
+		case '1':
 			telaCadastro_serv();
 			break;
-		case 2:
+		case '2':
 			telaPesquisa_serv();
 			break;
-		case 3:
+		case '3':
 			telaAtualiza_serv();
 			break;
-		case 4:
+		case '4':
 			telaExclui_serv();
 			break;
-		case 0:
+		case '0':
 			return;
 		
 		default:
-			printf("Opcao invalida, tente novamente...");
+			printf("### Opcao invalida, tente novamente... ###\n");
+			esperar();
 			break;
 		}
-	}
+	} while (pickServ!='0');
+
+	return;
 }
 
 // OPÇÕES -======
 void telaCadastro_serv(void)
 {
-	int res=5;
-	while (res!=1) {
-
+	do {
 		printf("\n\n");
 		printf("::=============================================::\n");
 		printf("::                                             ::\n");
@@ -62,14 +63,15 @@ void telaCadastro_serv(void)
 		printf("::    Tipo de Servico:                         ::\n");
 		printf("::    Duracao media de Servico (em min):       ::\n");
 		printf("::    Codigo do Servico:                       ::\n");
-		printf("::                                             ::\n");
-		printf("::    0 - (Voltar)                             ::\n");
-		scanf("%d", &res);
+		printf("::                      _ _ _ _ _ _ _ _ _ _ _  ::\n");
+		printf("::    1 - Prosseguir   |                       ::\n");
+		printf("::    0 - (Voltar)     | Resp.: ");
+		scanf("%1s", &pickServ); getchar();
 
-		switch (res)
-		{
-		case 1:
-
+		switch (pickServ) {
+		case '0':
+			break;
+		case '1':
 			char tipoServico[15];
 			int duracaoServico;
 			int codServico;
@@ -81,64 +83,108 @@ void telaCadastro_serv(void)
 			break;
 
 		default:
-			printf("\n-- Nao ha ou nao eh permitido essa opcao. --\n");
+			printf("\n### - ! Nao ha ou nao eh permitido essa opcao. ! ###\n");
+			esperar();
+			
 			break;
 		}
-	}
+	} while (pickServ!='0');
+
 	return;
 }
 
 void telaPesquisa_serv(void)
 {
-	int res;
 	do {
 		printf("\n\n");
 		printf("::=============================================::\n");
 		printf("::                                             ::\n");
 		printf("::     - - ---  PESQUISAR SERVICOS --- - -     ::\n");
 		printf("::                                             ::\n");
-		printf("::    Codigo do Servico:    \n");
-		printf("::                          \n");
-		printf("::    0 - (Voltar)          \n");
-		
-		scanf("%d", &res);
-		if (res==0) { return; }
-	} while (res!=0);
+		printf("::    Codigo do Servico:                       ::\n");
+		printf("::                       _   _   _   _   _   _ ::\n");
+		printf("::    1 - Prosseguir   |                       ::\n");
+		printf("::    0 - (Voltar)     | Resp.: ");
+		scanf("%1s", &pickServ); getchar();
 
+		switch (pickServ) {
+		case '0':
+			break;
+		case '1':
+			printf("# - Codigo do Servico: ");
+
+			break;
+
+		default:
+			printf("\n### - ! Nao ha ou nao eh permitido essa opcao. ! ###\n");
+			break;
+		}
+	
+	} while (pickServ!='0');
+
+	return;
 }
 
 void telaAtualiza_serv(void)
 {
-	printf("\n\n");
-    printf("::===================================================::\n");
-	printf("::                                                   ::\n");
-	printf("::    - - - - ---  ATUALIZAR SERVICOS --- - - - -    ::\n");
-	printf("::                                                   ::\n");
-	printf("::    Codigo do Servico:    \n");
-	printf("::                          \n");
-	printf("::    0 - (Voltar)          \n");
-	
-	int back;
-	scanf("%d", &back);
-	if (back==0) { return; }
+	do {
+		printf("\n\n");
+		printf("::=============================================::\n");
+		printf("::                                             ::\n");
+		printf("::     - - ---  ATUALIZAR SERVICOS --- - -     ::\n");
+		printf("::                                             ::\n");
+		printf("::    Codigo do Servico:                       ::\n");
+		printf("::                       _   _   _   _   _   _ ::\n");
+		printf("::    1 - Prosseguir   |                       ::\n");
+		printf("::    0 - (Voltar)     | Resp.: ");
+		scanf("%1s", &pickServ); getchar();
 
+		switch (pickServ) {
+		case '0':
+			break;
+		case '1':
+			printf("# - Codigo do Servico: ");
+
+			break;
+
+		default:
+			printf("\n### - ! Nao ha ou nao eh permitido essa opcao. ! ###\n");
+			break;
+		}
+	} while (pickServ!='0');
+	
+	return;
 }
 
 void telaExclui_serv(void)
 {
-	printf("\n\n");
-    printf("::===================================================::\n");
-	printf("::                                                   ::\n");
-	printf("::    - - - - ---  EXCLUIR SERVICOS --- - - - -      ::\n");
-	printf("::                                                   ::\n");
-	printf("::    Codigo do Servico:    \n");
-	printf("::                          \n");
-	printf("::    0 - (Voltar)          \n");
-	
-	int back;
-	scanf("%d", &back);
-	if (back==0) { return; }
+	do {
+		printf("\n\n");
+		printf("::=============================================::\n");
+		printf("::                                             ::\n");
+		printf("::     - - ---  EXCLUIR SERVICOS --- - -       ::\n");
+		printf("::                                             ::\n");
+		printf("::    Codigo do Servico:                       ::\n");
+		printf("::                       _   _   _   _   _   _ ::\n");
+		printf("::    1 - Prosseguir   |                       ::\n");
+		printf("::    0 - (Voltar)     | Resp.: ");
+		
+		switch (pickServ) {
+		case '0':
+			break;
 
+		case '1':
+			printf("# - Cod. do Servico: ");
+			break;
+
+		default:
+			printf("\n### - ! Nao ha ou nao eh permitido essa opcao. ! ###\n");
+			break;
+		}
+
+	} while (pickServ!='0');
+
+	return;
 }
 
 void telaExibe_serv(void)

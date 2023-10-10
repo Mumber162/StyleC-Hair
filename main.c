@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <unistd.h>
 #include "main.h"
 #include "util.h"
 #include "clientes.h"
@@ -56,7 +55,7 @@ int main()
 			break;
 		default:
 			printf("### Opcao invalida, tente novamente... ###\n");
-			sleep(3);
+			esperar();
 			break;
 		}
 	} while (pick!='0');
