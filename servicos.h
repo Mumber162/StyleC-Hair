@@ -11,4 +11,11 @@ void telaExibe_serv(void);
 void menuServicos(void);
 //--------------------------
 
+typedef struct servico Servico;
+struct servico {
+    char tipoServico[15];
+    int duracaoServico;
+    int codServico;
+};
+
 #endif

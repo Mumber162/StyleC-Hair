@@ -68,26 +68,23 @@ void telaCadastro_serv(void)
 		printf("::    0 - (Voltar)     | Resp.: ");
 		scanf("%1s", &pickServ); getchar();
 
-		switch (pickServ) {
-		case '0':
-			break;
-		case '1':
-			char tipoServico[15];
-			int duracaoServico;
-			int codServico;
+	// 	switch (pickServ) {
+	// 	case '0':
+	// 		break;
+	// 	case '1':
 
-			printf("# - Tipo de Servico                   : ");
-			printf("# - Duracao media de Servico (em min) : ");
-			printf("# - Codigo do Servico                 : ");
+	// 		printf("# - Tipo de Servico                   : ");
+	// 		printf("# - Duracao media de Servico (em min) : ");
+	// 		printf("# - Codigo do Servico                 : ");
 
-			break;
+	// 		break;
 
-		default:
-			printf("\n### - ! Nao ha ou nao eh permitido essa opcao. ! ###\n");
-			esperar();
+	// 	default:
+	// 		printf("\n### - ! Nao ha ou nao eh permitido essa opcao. ! ###\n");
+	// 		esperar();
 			
-			break;
-		}
+	// 		break;
+	// 	}
 	} while (pickServ!='0');
 
 	return;

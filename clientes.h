@@ -12,7 +12,6 @@ void menuClientes(void);
 //--------------------------
 
 typedef struct cliente Cliente;
-
 struct cliente {
     char nomeCliente[100];
     char cpfCliente[12];

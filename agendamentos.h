@@ -11,6 +11,12 @@ void telaExibe_agend(void);
 void menuAgendamentos(void);
 //--------------------------
 
-
+typedef struct agendamento Agendamento;
+struct agendamento {
+    int dd, mm, aaaa;
+    char hora;
+    float preco;
+    int codAgend;
+};
 
 #endif
