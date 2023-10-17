@@ -68,43 +68,38 @@ void telaCadastro_cliente(void)
 		printf("::    0 - (Voltar)     | Resp.: ");
 		scanf("%1s", &pickClient); getchar();
 
-		switch (pickClient) {
-		case '0':
-			break;
+	// 	switch (pickClient) {
+	// 	case '0':
+	// 		break;
 		
-		case '1':
-			char nomeCliente[100];
-			char cpfCliente[12];
-			char emailCliente[256];
-			char telCliente[12];
-			char tipoCabelo[100];
+	// 	case '1':
 
-			do {
-				printf("\n# - CPF do Cliente    : ");
-				scanf("%s", cpfCliente); getchar();
-			} while (!(validaCPF(cpfCliente)));
+	// 		do {
+	// 			printf("\n# - CPF do Cliente    : ");
+	// 			scanf("%s", cliente.cpfCliente); getchar();
+	// 		} while (!(validaCPF(cliente.cpfCliente)));
 
-			printf("\nSeu CPF eh: ");
-			mostraCPF(cpfCliente);
+	// 		printf("\nSeu CPF eh: ");
+	// 		mostraCPF(cpfCliente);
 			
-			do {
-				printf("\n# - Nome do Cliente   : ");
-				fgets(nomeCliente, sizeof(nomeCliente), stdin);
+	// 		do {
+	// 			printf("\n# - Nome do Cliente   : ");
+	// 			fgets(nomeCliente, sizeof(nomeCliente), stdin);
 
-			} while (!(validaNome(nomeCliente)));
+	// 		} while (!(validaNome(nomeCliente)));
 
-			printf("\nSeu NOME eh: %s", nomeCliente);
-			esperar();
+	// 		printf("\nSeu NOME eh: %s", nomeCliente);
+	// 		esperar();
 
-			printf("# - E-mail do Cliente :");
-			printf("# - Num. Telefone     :");
-			printf("# - Tipo de Cabelo    :");
-			break;
+	// 		printf("# - E-mail do Cliente :");
+	// 		printf("# - Num. Telefone     :");
+	// 		printf("# - Tipo de Cabelo    :");
+	// 		break;
 		
-		default:
-			erro1();
-			break;
-		}
+	// 	default:
+	// 		erro1();
+	// 		break;
+	// 	}
 	} while (pickClient!='0');
 
 	return;

@@ -11,4 +11,12 @@ void telaExibe_func(void);
 void menuFuncionarios(void);
 //--------------------------
 
+typedef struct funcionario Funcionario;
+
+struct funcionario {
+    char cpf[12];
+    char nome[20];
+    char email[45];
+};
+
 #endif

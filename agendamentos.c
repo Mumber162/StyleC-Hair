@@ -79,10 +79,6 @@ void telaCadastro_agend(void)
 				break;
 
 			case '1':
-				int dd, mm, aaaa;
-				char hora;
-				float preco;
-				int codAgend;
 
 				printf("# - Data (dd mm aaaa)      : ");
 				printf("# - Hora (--h--)           : ");

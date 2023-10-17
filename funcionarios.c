@@ -71,33 +71,29 @@ void telaCadastro_func(void)
 		printf("::    0 - (Voltar)     | Resp.: ");
 		scanf("%1s", &pickFunc); getchar();
 
-		switch (pickFunc) {
-		case '0':
-			break;
+		// switch (pickFunc) {
+		// case '0':
+		// 	break;
 
-		case '1':
+		// case '1':
 
-			char cpf[12];
-			char nome[20];
-			char email[45];
+		// 	do {
+		// 		printf("# - CPF do Funcionario   :");
+		// 		scanf("%[0-9]", cpf); getchar();
+		// 	} while (!(validaCPF(cpf)));
 
-			do {
-				printf("# - CPF do Funcionario   :");
-				scanf("%[0-9]", cpf); getchar();
-			} while (!(validaCPF(cpf)));
+		// 	printf("# - Nome do Funcionario  :");
+		// 	printf("# - Email do Funcionario :");
+		// 	printf("# - Num. Telefone        :");
+		// 	printf("# - Cargo                :");
+		// 	printf("# - Codigo para ID       :");	
 
-			printf("# - Nome do Funcionario  :");
-			printf("# - Email do Funcionario :");
-			printf("# - Num. Telefone        :");
-			printf("# - Cargo                :");
-			printf("# - Codigo para ID       :");	
+		// 	break;
 
-			break;
-
-		default:
-			printf("\n### - ! Nao ha ou nao eh permitido essa opcao. ! ###\n");
-			break;
-		}
+		// default:
+		// 	printf("\n### - ! Nao ha ou nao eh permitido essa opcao. ! ###\n");
+		// 	break;
+		// }
 	
 	} while (pickFunc!='0');
 
